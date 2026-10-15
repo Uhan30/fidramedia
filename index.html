@@ -109,7 +109,7 @@ section{padding-block:clamp(4rem,9vw,7.5rem)}
 .timetour{background:var(--sea-deep);color:var(--white)}
 .timetour .head p{color:#bcd0ca}
 .tour-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:1.2rem;align-items:stretch}
-#tour{width:100%;height:clamp(400px,66vh,680px);border-radius:8px;overflow:hidden;background:var(--sea-deep-2)}
+#tour{width:100%;height:auto;min-height:clamp(400px,66vh,680px);border-radius:8px;overflow:hidden;background:var(--sea-deep-2)}
 .picker{display:flex;flex-direction:column;gap:1.3rem;min-width:0}
 .picker h3{font:600 .95rem var(--body);color:#9fb8b1;letter-spacing:0;margin-bottom:.6rem}
 .years{display:grid;gap:.5rem}
@@ -124,6 +124,7 @@ section{padding-block:clamp(4rem,9vw,7.5rem)}
 .tour-note{margin-top:1rem;color:#9fb8b1;font-size:.93rem}
 @media (max-width:980px){
   .tour-grid{grid-template-columns:1fr}
+  #tour{min-height:clamp(320px,55vh,480px)}
   .picker{display:grid;grid-template-columns:1fr;gap:1rem}
   .years{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
   .yr{grid-template-columns:1fr;padding:.4rem .4rem .6rem}
@@ -146,11 +147,6 @@ section{padding-block:clamp(4rem,9vw,7.5rem)}
 .cmp-tag-r{right:1rem;background:var(--lamp);color:var(--basalt)}
 .cmp-range{position:absolute;inset:auto 0 0 0;width:100%;opacity:0;height:2.5rem;margin:0;cursor:ew-resize}
 .cmp-range:focus-visible{opacity:1}
-.cmp-years{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:1.1rem}
-.cmp-years>span{color:var(--mute);font-size:.95rem;margin-right:.3rem}
-.cmp-yr{display:flex;align-items:center;gap:.6rem;background:var(--white);border:2px solid transparent;border-radius:999px;padding:.3rem .9rem .3rem .3rem;font:600 .95rem var(--body);color:var(--basalt);cursor:pointer}
-.cmp-yr img{width:52px;height:34px;object-fit:cover;border-radius:999px}
-.cmp-yr[aria-pressed="true"]{border-color:var(--sea)}
 .cmp-note{margin:.8rem 0 0;color:var(--mute);font-size:.9rem}
 @media (max-width:600px){.cmp{aspect-ratio:4/3}}
 
@@ -179,6 +175,17 @@ section{padding-block:clamp(4rem,9vw,7.5rem)}
 .svc.wide ul{grid-column:2;grid-row:1/span 2;align-self:center}
 .svc.wide .for{grid-column:1/-1}
 @media (max-width:820px){.svc-grid{grid-template-columns:1fr}.svc.lead{grid-row:auto}.svc.wide{display:flex}}
+
+/* land and mapping */
+.land{background:var(--basalt);color:var(--white)}
+.land .head p{color:#bcd0ca}
+.land .mosaic figure{background:var(--basalt-2)}
+.land .m-third.contain img{object-fit:contain;background:#fff}
+.land-points{list-style:none;padding:0;margin:clamp(2rem,4vw,3rem) 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem 2rem}
+.land-points li{border-top:3px solid var(--lamp);padding-top:.9rem;color:#cddbd7;font-size:.97rem}
+.land-points b{display:block;color:var(--white);font-family:var(--display);font-stretch:110%;font-size:1.12rem;margin-bottom:.3rem}
+@media (max-width:900px){.land-points{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.land-points{grid-template-columns:1fr}}
 
 /* who for */
 .who-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem}
@@ -295,6 +302,7 @@ footer a{color:#cddbd7}
     <nav class="nav" aria-label="Main">
       <a href="#tours">360 tours</a>
       <a href="#services">Services</a>
+      <a href="#mapping">Mapping</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a class="btn lamp" href="#contact">Get a quote</a>
@@ -310,17 +318,17 @@ footer a{color:#cddbd7}
   </video>
   <button class="pause" type="button" id="reel-pause" aria-pressed="false">Pause video</button>
   <div class="wrap hero-in">
-    <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#d99a27"/><path d="M9.5 7.5v9l7-4.5z" fill="#16262b"/></svg>Filmed at Park Hill estate</p>
-    <h1 id="hero-title">360 tours and aerial photography for property and land.</h1>
-    <p class="lede">Walk-through tours, drone 360s, photos, film and maps, captured in one visit. Based in East Lothian, working across Scotland.</p>
+    <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#d99a27"/><path d="M9.5 7.5v9l7-4.5z" fill="#16262b"/></svg>Filmed on my own jobs around Scotland</p>
+    <h1 id="hero-title">360 tours, drone film and land mapping.</h1>
+    <p class="lede">360 tours for property and construction, drone photos and film, and maps for GIS and land boundaries. Based in East Lothian, working across Scotland.</p>
     <div class="btns">
       <a class="btn lamp" href="#contact">Get a quote</a>
-      <a class="btn line" href="#hall">See the transformation</a>
+      <a class="btn line" href="#hall">See a room change</a>
     </div>
     <ul class="facts-bar">
       <li><b>10 years</b>flying drones commercially</li>
       <li><b>Inside and out</b>ground and aerial 360s</li>
-      <li><b>Mapping and GIS</b>measured maps and 3D</li>
+      <li><b>Mapping and GIS</b>boundaries, maps and 3D</li>
       <li><b>East Lothian</b>based, Scotland-wide</li>
     </ul>
   </div>
@@ -329,59 +337,55 @@ footer a{color:#cddbd7}
 <section id="hall" class="hall" aria-labelledby="hall-title">
   <div class="wrap">
     <div class="head">
-      <h2 id="hall-title">The main hall, three years apart.</h2>
-      <p>Same room, same spot, taken from my 360s on each visit. Drag the line to compare the builders' dust of 2022 with the finished hall, then pick a year.</p>
+      <h2 id="hall-title">One room, two years apart.</h2>
+      <p>The top-floor lounge at Park Hill, taken from my 360s on two visits. Drag the line to go from bare stone walls in April 2022 to the finished room in August 2024.</p>
     </div>
     <div class="cmp" id="cmp" style="--pos:50%">
-      <img class="cmp-img" src="img/hall/hall-2022.jpg" srcset="img/hall/hall-2022-900.jpg 900w, img/hall/hall-2022.jpg 1800w" sizes="(max-width:1240px) 100vw, 1240px" width="1800" height="1125" alt="The main hall in April 2022, stripped back with scaffolding and building materials">
+      <img class="cmp-img" src="img/lounge/lounge-2022.jpg" srcset="img/lounge/lounge-2022-900.jpg 900w, img/lounge/lounge-2022.jpg 1800w" sizes="(max-width:1240px) 100vw, 1240px" width="1800" height="1125" alt="The lounge in April 2022: bare stone walls, open roof timbers and an empty fireplace">
       <div class="cmp-after" id="cmp-after">
-        <img id="cmp-after-img" class="cmp-img" src="img/hall/hall-2025.jpg" width="1800" height="1125" alt="The main hall in April 2025, finished and furnished">
+        <img id="cmp-after-img" class="cmp-img" src="img/lounge/lounge-2024.jpg" srcset="img/lounge/lounge-2024-900.jpg 900w, img/lounge/lounge-2024.jpg 1800w" sizes="(max-width:1240px) 100vw, 1240px" width="1800" height="1125" alt="The same lounge in August 2024: plastered walls, panelling, fireplace and furniture">
       </div>
       <span class="cmp-tag cmp-tag-l">Apr 2022</span>
-      <span class="cmp-tag cmp-tag-r" id="cmp-after-label">Apr 2025</span>
+      <span class="cmp-tag cmp-tag-r" id="cmp-after-label">Aug 2024</span>
       <div class="cmp-handle" aria-hidden="true"><span></span></div>
       <label class="sr" for="cmp-range">Compare before and after</label>
       <input class="cmp-range" id="cmp-range" type="range" min="0" max="100" value="50" step="0.5">
     </div>
-    <div class="cmp-years" role="group" aria-label="Compare 2022 with">
-      <span>Compare 2022 with</span>
-      <button class="cmp-yr" type="button" data-year="2023" data-label="Dec 2023" aria-pressed="false"><img src="img/hall/hall-2023-900.jpg" alt="" width="900" height="562">Dec 2023</button>
-      <button class="cmp-yr" type="button" data-year="2024" data-label="Aug 2024" aria-pressed="false"><img src="img/hall/hall-2024-900.jpg" alt="" width="900" height="562">Aug 2024</button>
-      <button class="cmp-yr" type="button" data-year="2025" data-label="Apr 2025" aria-pressed="true"><img src="img/hall/hall-2025-900.jpg" alt="" width="900" height="562">Apr 2025</button>
-    </div>
-    <p class="cmp-note">The August 2024 view is from the other side of the hall, looking the same way.</p>
+    <p class="cmp-note">Want to see it in between? The December 2023 visit, with the insulation going in, is in the 360 viewer below.</p>
   </div>
 </section>
 
 <section id="tours" class="timetour" aria-labelledby="tours-title">
   <div class="wrap">
     <div class="head">
-      <h2 id="tours-title">From the air, four visits.</h2>
-      <p>An aerial 360 above the house on every visit since 2022. Pick a year and the view stays pointing the same way, so you can see the roofs, gardens and pool change.</p>
+      <h2 id="tours-title">Look round it yourself.</h2>
+      <p>Real 360s from Park Hill, a country house I've recorded on every visit since 2022. Fly above the estate, step into the lounge as the build goes on, or stand by the new pool. Drag to look around.</p>
     </div>
     <div class="tour-grid">
       <div id="tour" role="img" aria-label="Interactive 360 view of Park Hill. Drag to look around."></div>
       <div class="picker">
         <div>
-          <h3 id="above">Above the house</h3>
+          <h3 id="above">From the air</h3>
           <div class="years" role="group" aria-labelledby="above">
-            <button class="yr" type="button" data-scene="house2022" aria-pressed="false"><img src="img/360/house-2022-thumb.jpg" alt="" width="180" height="100"><span><b>Apr 2022</b>Spring, early works</span></button>
-            <button class="yr" type="button" data-scene="house2023" aria-pressed="false"><img src="img/360/house-2023-thumb.jpg" alt="" width="180" height="100"><span><b>Dec 2023</b>Frosty winter visit</span></button>
-            <button class="yr" type="button" data-scene="house2024" aria-pressed="true"><img src="img/360/house-2024-thumb.jpg" alt="" width="180" height="100"><span><b>Aug 2024</b>High summer</span></button>
-            <button class="yr" type="button" data-scene="estate2025" aria-pressed="false"><img src="img/360/estate-2025-thumb.jpg" alt="" width="180" height="100"><span><b>Apr 2025</b>Higher, the whole estate</span></button>
+            <button class="yr" type="button" data-scene="air2022" aria-pressed="false"><img src="img/360/air-2022-thumb.jpg" alt="" width="180" height="100"><span><b>Apr 2022</b>Early works</span></button>
+            <button class="yr" type="button" data-scene="air2024" aria-pressed="true"><img src="img/360/air-2024-thumb.jpg" alt="" width="180" height="100"><span><b>Aug 2024</b>High summer</span></button>
+            <button class="yr" type="button" data-scene="air2025" aria-pressed="false"><img src="img/360/air-2025-thumb.jpg" alt="" width="180" height="100"><span><b>Apr 2025</b>Walled garden and pool</span></button>
           </div>
         </div>
         <div>
-          <h3 id="inside">Inside, April 2022</h3>
+          <h3 id="inside">On the ground</h3>
           <div class="years" role="group" aria-labelledby="inside">
-            <button class="yr" type="button" data-scene="hall2022" aria-pressed="false"><img src="img/360/hall-2022-thumb.jpg" alt="" width="180" height="100"><span><b>Main hall</b>Mid-renovation</span></button>
-            <button class="yr" type="button" data-scene="corridor2022" aria-pressed="false"><img src="img/360/corridor-2022-thumb.jpg" alt="" width="180" height="100"><span><b>Back corridor</b>Stripped back</span></button>
+            <button class="yr" type="button" data-scene="lounge2022" aria-pressed="false"><img src="img/360/lounge-2022-thumb.jpg" alt="" width="180" height="100"><span><b>Lounge, 2022</b>Bare stone</span></button>
+            <button class="yr" type="button" data-scene="lounge2023" aria-pressed="false"><img src="img/360/lounge-2023-thumb.jpg" alt="" width="180" height="100"><span><b>Lounge, 2023</b>Insulation going in</span></button>
+            <button class="yr" type="button" data-scene="lounge2024" aria-pressed="false"><img src="img/360/lounge-2024-thumb.jpg" alt="" width="180" height="100"><span><b>Lounge, 2024</b>Finished</span></button>
+            <button class="yr" type="button" data-scene="dining2024" aria-pressed="false"><img src="img/360/dining-2024-thumb.jpg" alt="" width="180" height="100"><span><b>Dining room</b>Aug 2024</span></button>
+            <button class="yr" type="button" data-scene="pool2025" aria-pressed="false"><img src="img/360/pool-2025-thumb.jpg" alt="" width="180" height="100"><span><b>New pool</b>Apr 2025</span></button>
           </div>
         </div>
-        <p class="now" id="now" aria-live="polite"><b>Aug 2024.</b> Hovering above the front of the house. Drag to look round.</p>
+        <p class="now" id="now" aria-live="polite"><b>Aug 2024.</b> Above the house in high summer. Drag to look round.</p>
       </div>
     </div>
-    <p class="tour-note">Each aerial 360 is stitched from around 35 to 60 drone photos. Pinch or scroll to zoom, or go full screen with the button in the corner.</p>
+    <p class="tour-note">Each aerial 360 is stitched from 35 to 60 drone photos. Pinch or scroll to zoom, or go full screen with the button in the corner.</p>
   </div>
 </section>
 
@@ -389,53 +393,73 @@ footer a{color:#cddbd7}
   <div class="wrap">
     <div class="head">
       <h2 id="services-title">What you can book</h2>
-      <p>Book one, or combine them into a single visit. You see a preview before you pay, and everything is yours to use.</p>
+      <p>Three things, done properly: 360 tours, drone photos and film, and maps. Book one, or combine them into a single visit. You see a preview before you pay.</p>
     </div>
     <div class="svc-grid">
       <article class="svc lead">
-        <div class="svc-top"><h3>360 virtual tour</h3><span class="tag">Most booked</span></div>
-        <p>A full walk-through of the inside, room by room, joined to an aerial 360 above the property. Viewers move from room to room in their browser.</p>
-        <figure><img src="img/360/hall-2022-2k.jpg" width="2048" height="1024" loading="lazy" alt="Flat preview of a 360 photo of a large hall with a staircase and gallery"></figure>
+        <div class="svc-top"><h3>360 tours for property and construction</h3><span class="tag">Most booked</span></div>
+        <p>A walk-through of the inside, room by room, joined to an aerial 360 above the property. Viewers move around in their browser, on any phone or computer.</p>
+        <figure><img src="img/lounge/lounge-2024.jpg" srcset="img/lounge/lounge-2024-900.jpg 900w, img/lounge/lounge-2024.jpg 1800w" sizes="(max-width:820px) 100vw, 50vw" width="1800" height="1125" loading="lazy" alt="Still from a 360 tour: a finished lounge with panelling, fireplace and bay window"></figure>
         <ul>
-          <li>Ground 360 in every main room and outside space</li>
+          <li>Ground 360s in every main room and outside space</li>
           <li>Aerial 360 above the property</li>
-          <li>Hosted tour link that works on any phone or computer, no app</li>
-          <li>Code to embed the tour on your own website</li>
-          <li>Still photos taken from the tour</li>
+          <li>Hosted tour link, no app needed, plus code for your website</li>
+          <li>Repeat visits from the same spots to record a build</li>
         </ul>
-        <p class="for"><b>Good for:</b> sales and lettings, holiday lets, venues, renovation records</p>
+        <p class="for"><b>Good for:</b> sales and lettings, holiday lets, venues, builders and renovations</p>
       </article>
       <article class="svc">
-        <div class="svc-top"><h3>Aerial photos and film</h3></div>
+        <div class="svc-top"><h3>Drone photos and film</h3></div>
         <p>High, wide shots that show the whole property, the plot and the setting, plus a short edited film.</p>
         <ul>
           <li>Edited aerial photos, ready for listings and print</li>
           <li>Short film for websites and social media</li>
-          <li>Wide panoramas of the land and view</li>
+          <li>Wide panoramas of the land and the view</li>
         </ul>
-        <p class="for"><b>Good for:</b> estate agents, hotels, golf courses, landowners</p>
+        <p class="for"><b>Good for:</b> architects, estate agents, hotels, landowners</p>
       </article>
       <article class="svc">
-        <div class="svc-top"><h3>Progress records</h3><span class="tag">Repeat visits</span></div>
-        <p>The same 360s and photos from the same spots on every visit, so you can see what changed and when.</p>
+        <div class="svc-top"><h3>Construction progress</h3><span class="tag">Repeat visits</span></div>
+        <p>The same 360s and aerials from the same spots on every visit, so clients and owners can see what changed and when.</p>
         <ul>
           <li>Matching aerial 360s each visit, like Park Hill above</li>
-          <li>Interior 360s at key stages</li>
+          <li>Interior 360s at key stages, before walls are closed up</li>
           <li>Monthly, quarterly or at milestones</li>
         </ul>
-        <p class="for"><b>Good for:</b> builders, self-builders, owners renovating from a distance</p>
+        <p class="for"><b>Good for:</b> builders, developers, self-builders, owners renovating from a distance</p>
       </article>
       <article class="svc wide">
-        <div class="svc-top"><h3>Maps, boundaries and 3D</h3></div>
-        <p>Stitched straight-down maps at around 3 cm per pixel, boundary overlays, 3D models and ground height data, delivered ready for GIS.</p>
+        <div class="svc-top"><h3>Maps, boundaries and GIS</h3></div>
+        <p>Measured aerial maps, land boundaries, height data and 3D models, delivered as files that open in GIS and CAD. <a href="#mapping">See examples</a>.</p>
         <ul>
-          <li>Measured site map of a plot, garden, field or estate</li>
           <li>Boundaries and features marked on aerial images</li>
-          <li>3D model and terrain data for design</li>
+          <li>Measured map of a plot, field, woodland or estate</li>
+          <li>Ground height and 3D models for design and planning</li>
         </ul>
-        <p class="for"><b>Good for:</b> architects, planners, estates, environmental consultants</p>
+        <p class="for"><b>Good for:</b> estates and land managers, farms, architects, planners, environmental consultants</p>
       </article>
     </div>
+  </div>
+</section>
+
+<section id="mapping" class="land" aria-labelledby="land-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="land-title">Maps for land and estates.</h2>
+      <p>The same drone flight that makes the photos can also make measured maps. I mark boundaries, measure areas and build height and 3D data, ready to drop into your GIS or hand to a surveyor or planner.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="m-wide"><img src="img/parkhill-boundary-2000.jpg" srcset="img/parkhill-boundary-1000.jpg 1000w, img/parkhill-boundary-2000.jpg 2000w" sizes="100vw" width="2000" height="676" loading="lazy" alt="Aerial panorama of farmland with the estate boundary drawn as a yellow line"><figcaption>Park Hill: the estate boundary marked on an aerial panorama, 2025</figcaption></figure>
+      <figure class="m-third contain"><img src="img/work/height-map-1200.jpg" width="1200" height="766" loading="lazy" alt="Colour-shaded height map of a hillside site, from blue for low ground to red for high"><figcaption>Ground height map from a drone survey</figcaption></figure>
+      <figure class="m-third contain"><img src="img/work/tower-3d-500.jpg" width="500" height="500" loading="lazy" alt="3D model of an old stone tower on a grassy hill"><figcaption>3D model of a stone tower</figcaption></figure>
+      <figure class="m-third"><img src="img/work/site-topdown-800.jpg" srcset="img/work/site-topdown-800.jpg 800w, img/work/site-topdown-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 33vw" width="1600" height="1068" loading="lazy" alt="Straight-down aerial photo of diggers working on a construction site"><figcaption>Construction site from straight above</figcaption></figure>
+    </div>
+    <ul class="land-points">
+      <li><b>Boundaries</b>Your land lines drawn on clear aerial images, for owners, agents and neighbours.</li>
+      <li><b>Measured maps</b>Stitched straight-down maps you can measure from, at a few centimetres per pixel.</li>
+      <li><b>Height and 3D</b>Ground height, slopes and 3D models for design, drainage and planning.</li>
+      <li><b>GIS-ready files</b>GeoTIFF, KML and shapefiles that open in QGIS, ArcGIS and Google Earth.</li>
+    </ul>
   </div>
 </section>
 
@@ -470,8 +494,8 @@ footer a{color:#cddbd7}
       <div class="mosaic">
         <figure class="m-big"><img src="img/hero-mallaig-1600.jpg" srcset="img/hero-mallaig-900.jpg 900w, img/hero-mallaig-1600.jpg 1600w, img/hero-mallaig-2400.jpg 2400w" sizes="(max-width:760px) 100vw, 66vw" loading="lazy" alt="Turquoise bay and snow-dusted hills at Mallaig Mhor from the air"><figcaption>Mallaig Mhor bay</figcaption></figure>
         <div class="m-side">
-          <figure><img src="img/mallaig-loch-800.jpg" loading="lazy" alt="Loch Nevis with a steep hill dropping into the water"><figcaption>Loch Nevis</figcaption></figure>
-          <figure><img src="img/mallaig-hill-800.jpg" loading="lazy" alt="Heather hillside above the shore with a cottage below"><figcaption>The hill ground</figcaption></figure>
+          <figure><img src="img/mallaig-loch-800.jpg" srcset="img/mallaig-loch-800.jpg 800w, img/mallaig-loch-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" loading="lazy" alt="Loch Nevis with a steep hill dropping into the water"><figcaption>Loch Nevis</figcaption></figure>
+          <figure><img src="img/mallaig-hill-800.jpg" srcset="img/mallaig-hill-800.jpg 800w, img/mallaig-hill-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" loading="lazy" alt="Heather hillside above the shore with a cottage below"><figcaption>The hill ground</figcaption></figure>
         </div>
       </div>
       <div class="mosaic" style="margin-top:.8rem">
@@ -479,51 +503,80 @@ footer a{color:#cddbd7}
       </div>
     </article>
 
+    <article class="project" aria-labelledby="bf-title">
+      <div class="proj-head">
+        <div>
+          <h3 id="bf-title">Blackford Hill house, Edinburgh</h3>
+          <div class="meta"><span>Aerial film</span><span>Aerial photos</span><span>For Zone Architects</span></div>
+        </div>
+        <p>A new family home on the slopes of Blackford Hill, designed by Zone Architects with the living space upstairs to make the most of the view. I filmed and photographed it for the architects, from the house itself out to the Royal Observatory and Arthur's Seat.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="m-big"><img src="img/work/blackford-house-1600.jpg" srcset="img/work/blackford-house-800.jpg 800w, img/work/blackford-house-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 66vw" width="1600" height="900" loading="lazy" alt="Modern three-storey house on Blackford Hill with the Royal Observatory and the Pentland Hills behind"><figcaption>The house, with the Royal Observatory behind</figcaption></figure>
+        <div class="m-side">
+          <figure><img src="img/work/blackford-view-800.jpg" srcset="img/work/blackford-view-800.jpg 800w, img/work/blackford-view-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" width="800" height="450" loading="lazy" alt="Aerial view over south Edinburgh rooftops towards Arthur's Seat, with the new house in the foreground"><figcaption>Looking north to Arthur's Seat</figcaption></figure>
+          <figure><img src="img/work/blackford-top-800.jpg" srcset="img/work/blackford-top-800.jpg 800w, img/work/blackford-top-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" width="800" height="450" loading="lazy" alt="The house and garden from almost straight above"><figcaption>From above</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" aria-labelledby="bk-title">
+      <div class="proj-head">
+        <div>
+          <h3 id="bk-title">The Beekeeper's House, Roxburgh</h3>
+          <div class="meta"><span>Aerial film</span><span>Aerial photos</span><span>For Zone Architects</span></div>
+        </div>
+        <p>A new timber-framed home in the Scottish Borders village of Roxburgh, near Kelso, designed by Zone Architects. It sits on a steep plot beside the old churchyard, so the aerials show how the house steps down the slope and fits in with its neighbours.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="m-big"><img src="img/work/beekeeper-house-1600.jpg" srcset="img/work/beekeeper-house-800.jpg 800w, img/work/beekeeper-house-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 66vw" width="1600" height="1200" loading="lazy" alt="Pale new house with a grey roof on a sloping garden beside a village churchyard"><figcaption>The house and its terraced garden</figcaption></figure>
+        <div class="m-side">
+          <figure><img src="img/work/beekeeper-lane-800.jpg" srcset="img/work/beekeeper-lane-800.jpg 800w, img/work/beekeeper-lane-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" width="800" height="600" loading="lazy" alt="The house from the lane, with the church and fields behind"><figcaption>From the lane</figcaption></figure>
+          <figure><img src="img/work/beekeeper-church-800.jpg" srcset="img/work/beekeeper-church-800.jpg 800w, img/work/beekeeper-church-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" width="800" height="600" loading="lazy" alt="The house from above the churchyard"><figcaption>Beside the old churchyard</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" aria-labelledby="dn-title">
+      <div class="proj-head">
+        <div>
+          <h3 id="dn-title">Dornie, by Eilean Donan</h3>
+          <div class="meta"><span>Aerial film</span><span>Panoramas</span></div>
+        </div>
+        <p>Aerial photos and film of a property in Dornie, in the Highlands, looking across Loch Duich to Eilean Donan Castle. Spring blossom, blue water and one of Scotland's best-known views in the background.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="m-wide" style="aspect-ratio:16/9"><img src="img/work/dornie-castle-1600.jpg" srcset="img/work/dornie-castle-800.jpg 800w, img/work/dornie-castle-1600.jpg 1600w" sizes="100vw" width="1600" height="900" loading="lazy" alt="Aerial view over Dornie village and Loch Duich with Eilean Donan Castle on its island"><figcaption>Dornie, with Eilean Donan Castle across the water</figcaption></figure>
+      </div>
+    </article>
+
     <article class="project" aria-labelledby="ph-title">
       <div class="proj-head">
         <div>
           <h3 id="ph-title">Park Hill estate</h3>
-          <div class="meta"><span>Aerial 360s</span><span>Interior tours</span><span>Progress records</span><span>Boundary map</span></div>
+          <div class="meta"><span>Aerial 360s</span><span>Interior 360s</span><span>Progress records</span><span>Boundary map</span></div>
         </div>
-        <p>A country house and its grounds, recorded on five visits between April 2022 and April 2025. Each visit adds aerial 360s, an interior tour and a short film, so the owners have a clear record of the whole renovation.</p>
+        <p>A country house and its grounds, recorded on every visit since April 2022. Each visit adds aerial 360s, interior 360s and photos, so the owner has a clear record of the whole renovation. Most recently I mapped the estate boundary to help plan the land.</p>
       </div>
       <div class="mosaic">
-        <figure class="m-third"><img src="img/parkhill-house-tree-800.jpg" loading="lazy" alt="Park Hill house behind a large cedar tree"><figcaption>The house and its cedar, 2025</figcaption></figure>
-        <figure class="m-third"><img src="img/parkhill-house-estate-800.jpg" loading="lazy" alt="Park Hill house among trees and open fields"><figcaption>House and grounds</figcaption></figure>
-        <figure class="m-third"><img src="img/parkhill-town-800.jpg" loading="lazy" alt="High view over the estate fields towards the town"><figcaption>Looking out over the fields</figcaption></figure>
-        <figure class="m-wide"><img src="img/parkhill-boundary-2000.jpg" srcset="img/parkhill-boundary-1000.jpg 1000w, img/parkhill-boundary-2000.jpg 2000w" sizes="100vw" loading="lazy" alt="Aerial panorama with the land boundary drawn as a yellow line"><figcaption>Land boundary marked on an aerial panorama</figcaption></figure>
-      </div>
-    </article>
-
-    <article class="project" aria-labelledby="ed-title">
-      <div class="proj-head">
-        <div>
-          <h3 id="ed-title">New build, Edinburgh</h3>
-          <div class="meta"><span>Aerial photos</span><span>Architecture</span></div>
-        </div>
-        <p>A finished new home photographed from the air, showing how it sits on its street with Arthur's Seat on the skyline.</p>
-      </div>
-      <div class="mosaic">
-        <figure class="m-big"><img src="img/edinburgh-newbuild.jpg" loading="lazy" alt="Modern dark-roofed house in Edinburgh with Arthur's Seat behind" style="object-position:50% 70%"><figcaption>Edinburgh, looking to Arthur's Seat</figcaption></figure>
-        <div class="m-side">
-          <figure><img src="img/woodland-house.jpg" loading="lazy" alt="Contemporary timber house in woodland from above"><figcaption>House in the woods</figcaption></figure>
-          <figure><img src="img/cottage-churchyard.jpg" loading="lazy" alt="Renovated white cottage beside a village churchyard"><figcaption>Village cottage</figcaption></figure>
-        </div>
+        <figure class="m-third"><img src="img/parkhill-house-tree-800.jpg" srcset="img/parkhill-house-tree-800.jpg 800w, img/parkhill-house-tree-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" loading="lazy" alt="Park Hill house behind a large cedar tree"><figcaption>The house and its cedar, 2025</figcaption></figure>
+        <figure class="m-third"><img src="img/parkhill-house-estate-800.jpg" srcset="img/parkhill-house-estate-800.jpg 800w, img/parkhill-house-estate-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" loading="lazy" alt="Park Hill house among trees and open fields"><figcaption>House and grounds</figcaption></figure>
+        <figure class="m-third"><img src="img/parkhill-town-800.jpg" srcset="img/parkhill-town-800.jpg 800w, img/parkhill-town-1600.jpg 1600w" sizes="(max-width:760px) 50vw, 33vw" loading="lazy" alt="High view over the estate fields towards the town"><figcaption>Looking out over the fields</figcaption></figure>
       </div>
     </article>
   </div>
 </section>
 
 <section class="film" aria-labelledby="film-title">
-  <video id="film" autoplay muted loop playsinline preload="metadata" poster="img/parkhill-film-poster.jpg" aria-label="Drone film rising away from Park Hill house on a frosty morning">
-    <source src="media/parkhill-film-960.mp4" type="video/mp4" media="(max-width:760px)">
-    <source src="media/parkhill-film.mp4" type="video/mp4">
+  <video id="film" muted loop playsinline preload="none" poster="img/mallaig-film-poster.jpg" aria-label="Drone film over a snowy coastal croft: stone ruins, a turquoise bay and a white cottage below the hills">
+    <source src="media/mallaig-film-960.mp4" type="video/mp4" media="(max-width:760px)">
+    <source src="media/mallaig-film.mp4" type="video/mp4">
   </video>
   <button class="pause" type="button" id="pause" aria-pressed="false">Pause film</button>
   <div class="film-text">
     <div class="wrap">
-      <h2 id="film-title">Every visit ends with a short film.</h2>
-      <p>Park Hill, December 2023: rising back from the house on a frosty morning to show the whole hillside.</p>
+      <h2 id="film-title">Every job can end with a short film.</h2>
+      <p>Mallaig Mhor, filmed for its sale after a fresh dusting of snow: over the old ruins, out across the bay and in to the cottage.</p>
     </div>
   </div>
 </section>
@@ -546,6 +599,7 @@ footer a{color:#cddbd7}
         <details><summary>How do people view a 360 tour?</summary><p>Through a normal web link. It opens in any browser on a phone, tablet or computer, with no app or account. People drag or tilt their phone to look around and tap to move between rooms.</p></details>
         <details><summary>Can I put the tour on my own website?</summary><p>Yes. You get a link to share and a short piece of code that places the tour on any web page.</p></details>
         <details><summary>What happens if the weather's bad?</summary><p>I watch the forecast in the days before and we move the date if it won't give good results. Interior 360s can usually go ahead whatever the weather.</p></details>
+        <details><summary>What do I get from a mapping job?</summary><p>Usually a measured aerial map (GeoTIFF), boundary and area files (KML or shapefile) and a PDF you can print. Height data and 3D models are available if you need them. Everything opens in QGIS, ArcGIS or Google Earth.</p></details>
         <details><summary>How far do you travel?</summary><p>Edinburgh, East Lothian and the Lothians week to week. Further afield, like the Mallaig job, by arrangement.</p></details>
       </div>
     </div>
@@ -569,7 +623,7 @@ footer a{color:#cddbd7}
 <section id="contact" class="contact" aria-labelledby="contact-title">
   <div class="wrap">
     <div>
-      <h2 id="contact-title">Get a price for your property.</h2>
+      <h2 id="contact-title">Get a price for your property or land.</h2>
       <p class="lede">Tell me where it is and what you need. I'll come back with a fixed price.</p>
       <div class="mailrow">
         <a class="mail" href="mailto:ewan@fidramedia.com">ewan@fidramedia.com</a>
@@ -582,10 +636,10 @@ footer a{color:#cddbd7}
       <label for="f-where">Where is the property?<input id="f-where" name="where" placeholder="A town, village or postcode"></label>
       <label for="f-need">What do you need?
         <select id="f-need" name="need">
-          <option>360 virtual tour</option>
-          <option>Aerial photos and film</option>
-          <option>Progress records</option>
-          <option>Maps, boundaries or 3D</option>
+          <option>360 tour</option>
+          <option>Drone photos and film</option>
+          <option>Construction progress</option>
+          <option>Maps, boundaries or GIS</option>
           <option>Not sure yet</option>
         </select>
       </label>
@@ -626,7 +680,7 @@ footer a{color:#cddbd7}
   if(reduce){ reel.removeAttribute('autoplay'); reelPaused(true); }
   rp.addEventListener('click',function(){ reelPaused(!reel.paused); });
 
-  // main hall before/after slider
+  // lounge before/after slider
   var cmp=document.getElementById('cmp'), after=document.getElementById('cmp-after'), range=document.getElementById('cmp-range'), afterImg=document.getElementById('cmp-after-img'), afterLabel=document.getElementById('cmp-after-label');
   function setPos(v){ cmp.style.setProperty('--pos',v+'%'); range.value=v; }
   range.addEventListener('input',function(){ setPos(range.value); });
@@ -635,48 +689,46 @@ footer a{color:#cddbd7}
   cmp.addEventListener('pointerdown',function(e){ dragging=true; cmp.setPointerCapture(e.pointerId); fromEvent(e); });
   cmp.addEventListener('pointermove',function(e){ if(dragging) fromEvent(e); });
   ['pointerup','pointercancel'].forEach(function(t){ cmp.addEventListener(t,function(){ dragging=false; }); });
-  document.querySelectorAll('.cmp-yr').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.cmp-yr').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-      afterImg.src='img/hall/hall-'+b.dataset.year+(small?'-900':'')+'.jpg';
-      afterImg.alt='The main hall in '+b.dataset.label;
-      afterLabel.textContent=b.dataset.label;
-    });
-  });
-
-  // the four-visit tour; heading offsets keep each year pointing the same way
+  // Park Hill 360s. Ground scenes are cropped below -60 degrees, so the viewer stops before the floor.
   var notes={
-    house2022:'<b>Apr 2022.</b> Above the front of the house in the early stages of the works.',
-    house2023:'<b>Dec 2023.</b> The same spot on a frosty winter morning.',
-    house2024:'<b>Aug 2024.</b> Hovering above the front of the house. Drag to look round.',
-    estate2025:'<b>Apr 2025.</b> Flown higher to take in the whole estate and the finished pool.',
-    hall2022:'<b>Main hall, Apr 2022.</b> The staircase and gallery mid-renovation.',
-    corridor2022:'<b>Back corridor, Apr 2022.</b> Walls stripped back to the stone.'
+    air2022:'<b>Apr 2022.</b> Above the house in the early stages of the works.',
+    air2024:'<b>Aug 2024.</b> Above the house in high summer. Drag to look round.',
+    air2025:'<b>Apr 2025.</b> Over the walled garden, with the new pool in.',
+    lounge2022:'<b>Lounge, Apr 2022.</b> Stripped back to bare stone and roof timbers.',
+    lounge2023:'<b>Lounge, Dec 2023.</b> Scaffolding up and the insulation going in.',
+    lounge2024:'<b>Lounge, Aug 2024.</b> Finished and furnished. Same room as the slider above.',
+    dining2024:'<b>Dining room, Aug 2024.</b> Plaster ceiling, chandelier and the long table.',
+    pool2025:'<b>New pool, Apr 2025.</b> Inside the walled garden, just finished.'
   };
-  var offset={house2022:-5,house2023:-10,house2024:0,estate2025:10};
-  var tour=null, current='house2024';
+  var view={ // file, yaw, pitch, ground?
+    air2022:['air-2022',0,-35],air2024:['air-2024',-150,-35],air2025:['air-2025',-40,-45],
+    lounge2022:['lounge-2022',-112,-5,1],lounge2023:['lounge-2023',150,-5,1],lounge2024:['lounge-2024',172,-5,1],
+    dining2024:['dining-2024',30,0,1],pool2025:['pool-2025',60,-10,1]
+  };
+  var offset={lounge2022:0,lounge2024:-76}; // same wall in both lounge shots
+  var tour=null, current='air2024';
   if(hasPano){
     try{
       var scenes={};
-      ['house2022','house2023','house2024','estate2025'].forEach(function(k){
-        var file={house2022:'house-2022',house2023:'house-2023',house2024:'house-2024',estate2025:'estate-2025'}[k];
-        scenes[k]={type:'equirectangular',panorama:big(file),yaw:-5+offset[k],pitch:-18,hfov:100};
+      Object.keys(view).forEach(function(k){
+        var v=view[k], sc={type:'equirectangular',panorama:big(v[0]),yaw:v[1],pitch:v[2],hfov:100};
+        if(v[3]){ sc.haov=360; sc.vaov=150; sc.vOffset=15; sc.minPitch=-60; sc.maxPitch=90; sc.avoidShowingBackground=true; }
+        if(k==='air2025'){ sc.maxPitch=30; }
+        scenes[k]=sc;
       });
-      scenes.hall2022={type:'equirectangular',panorama:big('hall-2022'),yaw:0,pitch:0,hfov:100};
-      scenes.corridor2022={type:'equirectangular',panorama:big('corridor-2022'),yaw:0,pitch:0,hfov:100};
-      tour=pannellum.viewer('tour',{default:{firstScene:'house2024',autoLoad:true,compass:false,showZoomCtrl:true,sceneFadeDuration:700,autoRotate:reduce?0:-1.5,autoRotateInactivityDelay:6000},scenes:scenes});
+      tour=pannellum.viewer('tour',{default:{firstScene:'air2024',autoLoad:true,compass:false,showZoomCtrl:true,sceneFadeDuration:700,autoRotate:reduce?0:-1.5,autoRotateInactivityDelay:6000},scenes:scenes});
     }catch(e){ tour=null; }
   }
-  if(!tour){ document.getElementById('tour').innerHTML='<img src="img/360/house-2024-2k.jpg" alt="Aerial 360 photo of Park Hill" style="width:100%;height:100%;object-fit:cover">'; }
+  if(!tour){ document.getElementById('tour').innerHTML='<img src="img/360/air-2024-2k.jpg" alt="Aerial 360 photo of Park Hill" style="width:100%;height:100%;object-fit:cover">'; }
   document.querySelectorAll('.yr').forEach(function(b){
     b.addEventListener('click',function(){
       var next=b.dataset.scene;
+      if(next===current) return;
       document.querySelectorAll('.yr').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
       document.getElementById('now').innerHTML=notes[next];
       if(tour){
         if(next in offset && current in offset){
-          var yaw=tour.getYaw()-offset[current]+offset[next];
-          tour.loadScene(next,tour.getPitch(),yaw,tour.getHfov());
+          tour.loadScene(next,tour.getPitch(),tour.getYaw()-offset[current]+offset[next],tour.getHfov());
         } else { tour.loadScene(next); }
       }
       current=next;
@@ -686,8 +738,13 @@ footer a{color:#cddbd7}
   // film
   var film=document.getElementById('film'), pause=document.getElementById('pause');
   function setPaused(p){ if(p){film.pause()}else{film.play().catch(function(){})} pause.textContent=p?'Play film':'Pause film'; pause.setAttribute('aria-pressed',p?'true':'false'); }
-  if(reduce){ film.removeAttribute('autoplay'); setPaused(true); }
-  pause.addEventListener('click',function(){ setPaused(!film.paused); });
+  var userPaused=reduce;
+  if(reduce){ setPaused(true); }
+  pause.addEventListener('click',function(){ userPaused=!film.paused; setPaused(userPaused); });
+  // only load and play the film when it scrolls into view
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ if(!userPaused) setPaused(false); } else if(!film.paused){ film.pause(); } }); },{rootMargin:'200px 0px'}).observe(film);
+  } else if(!reduce){ setPaused(false); }
 
   // drag-scroll panoramas
   document.querySelectorAll('.strip-scroll').forEach(function(s){
