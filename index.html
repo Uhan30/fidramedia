@@ -187,12 +187,54 @@ section{padding-block:clamp(4rem,9vw,7.5rem)}
 @media (max-width:900px){.land-points{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.land-points{grid-template-columns:1fr}}
 
+.land .m-half{grid-column:span 6;aspect-ratio:16/9}
+.land .contain img{object-fit:contain;background:#fff}
+.land .sub{font-size:clamp(1.4rem,2.4vw,1.8rem);font-weight:700;margin:clamp(2.5rem,5vw,4rem) 0 1.2rem}
+.ptabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.ptab{font:600 .97rem var(--body);color:#d5e2de;background:var(--basalt-2);border:1px solid rgba(207,227,220,.18);border-radius:999px;padding:.6rem 1.1rem;cursor:pointer}
+.ptab:hover{background:var(--basalt-3)}
+.ptab[aria-selected="true"]{background:var(--lamp);border-color:var(--lamp);color:var(--basalt)}
+.ppanel{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:1.6rem;align-items:start}
+.ppanel[hidden]{display:none}
+.map{position:relative;margin:0;aspect-ratio:3/2;border-radius:8px;overflow:hidden;background:var(--basalt-2)}
+.map img{width:100%;height:100%;object-fit:cover;display:block}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .sample{position:absolute;right:.7rem;bottom:.7rem;background:rgba(22,38,43,.82);color:#fff;font-size:.78rem;font-weight:600;padding:.25rem .6rem;border-radius:999px}
+.map .pill rect{fill:rgba(16,28,32,.84)}
+.map .pill text{fill:#fff;font:600 22px var(--body);text-anchor:middle;dominant-baseline:middle}
+.map .mk circle{stroke:#16262b;stroke-width:3}
+.map .mk text{fill:#16262b;font:800 22px var(--body);text-anchor:middle;dominant-baseline:middle}
+.map .plotno{fill:#fff;font:800 20px var(--body);text-anchor:middle;dominant-baseline:middle;paint-order:stroke;stroke:#16262b;stroke-width:5px}
+.map .north circle,.map .scale rect{fill:rgba(16,28,32,.84)}
+.map .north path{fill:#fff}
+.map .north text,.map .scale text{fill:#fff;font:700 16px var(--body);text-anchor:middle;dominant-baseline:middle}
+.map .ap rect{fill:#22a845;stroke:#fff;stroke-width:3}
+.map .ap path{fill:#fff}
+.pinfo h3{font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:700;margin-bottom:.6rem}
+.pinfo>p{color:#cddbd7;margin:0 0 1rem}
+.pinfo h4{font:700 1rem var(--body);color:var(--white);margin:1.2rem 0 .5rem}
+.legend{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.9rem;color:#cddbd7}
+.legend i{display:inline-block;width:.9rem;height:.9rem;border-radius:3px;margin-right:.4rem;vertical-align:-2px;border:1px solid rgba(255,255,255,.35)}
+.map-key{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.35rem;font-size:.93rem;color:#cddbd7}
+.map-key span{display:inline-grid;place-items:center;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--lamp);color:var(--basalt);font-weight:800;font-size:.8rem;margin-right:.55rem}
+.map-notes{margin:1rem 0 0;padding-left:1.1rem;font-size:.93rem;color:#cddbd7}
+.gets{list-style:none;padding:0;margin:0;display:grid;gap:.4rem;font-size:.95rem}
+.gets li{padding-left:1.5rem;position:relative;color:#e3ece9}
+.gets li::before{content:"";position:absolute;left:0;top:.42em;width:.85rem;height:.48rem;border-left:2px solid var(--lamp);border-bottom:2px solid var(--lamp);transform:rotate(-45deg)}
+.pinfo .for{margin:1.1rem 0 0;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.14);font-size:.93rem;color:#a9c0ba}
+.golf{margin-top:1.6rem;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.6rem 1.6rem;align-items:center;background:var(--sea-deep);border-radius:10px;padding:1.2rem 1.5rem}
+.golf h3{font-size:1.3rem;font-weight:700;margin:0}
+.golf p{margin:0;color:#cddbd7;font-size:.97rem}
+@media (max-width:900px){.ppanel{grid-template-columns:1fr}.golf{grid-template-columns:1fr}.golf .btn{justify-self:start}}
+@media (max-width:760px){.land .m-half{grid-column:span 12}}
+@media (max-width:600px){.map .pill{display:none}.map .sample{font-size:.68rem;padding:.15rem .5rem}.ptab{font-size:.9rem;padding:.5rem .85rem}}
+
 /* who for */
-.who-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem}
+.who-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 1.6rem}
 .who{border-top:3px solid var(--sea);padding-top:1rem}
 .who h3{font-size:1.15rem;font-weight:700;margin-bottom:.45rem}
 .who p{font-size:.97rem;color:var(--mute);margin:0}
-@media (max-width:1000px){.who-grid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:2rem}}
+@media (max-width:860px){.who-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:620px){.who-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.who-grid{grid-template-columns:1fr}}
 
@@ -436,7 +478,7 @@ footer a{color:#cddbd7}
           <li>Measured map of a plot, field, woodland or estate</li>
           <li>Ground height and 3D models for design and planning</li>
         </ul>
-        <p class="for"><b>Good for:</b> estates and land managers, farms, architects, planners, environmental consultants</p>
+        <p class="for"><b>Good for:</b> estates, farms, golf courses, care homes, builders, architects and planners</p>
       </article>
     </div>
   </div>
@@ -445,14 +487,102 @@ footer a{color:#cddbd7}
 <section id="mapping" class="land" aria-labelledby="land-title">
   <div class="wrap">
     <div class="head">
-      <h2 id="land-title">Maps for land and estates.</h2>
-      <p>The same drone flight that makes the photos can also make measured maps. I mark boundaries, measure areas and build height and 3D data, ready to drop into your GIS or hand to a surveyor or planner.</p>
+      <h2 id="land-title">Maps and reports for the land you look after.</h2>
+      <p>One flight can give you much more than photos. Pick a tab to see the kind of map I make for each type of client. I'm based in Gullane, so East Lothian's estates, farms, golf courses and holiday lets are on my doorstep.</p>
     </div>
+    <div class="products">
+      <div class="ptabs" role="tablist" aria-label="Example map products"><button class="ptab" type="button" role="tab" id="tab-estate" aria-controls="panel-estate" aria-selected="true">Estates and land</button><button class="ptab" type="button" role="tab" id="tab-farm" aria-controls="panel-farm" aria-selected="false" tabindex="-1">Farms</button><button class="ptab" type="button" role="tab" id="tab-site" aria-controls="panel-site" aria-selected="false" tabindex="-1">Building sites</button><button class="ptab" type="button" role="tab" id="tab-care" aria-controls="panel-care" aria-selected="false" tabindex="-1">Care homes and hotels</button><button class="ptab" type="button" role="tab" id="tab-holiday" aria-controls="panel-holiday" aria-selected="false" tabindex="-1">Holiday homes</button></div>
+      <div class="ppanel" role="tabpanel" id="panel-estate" aria-labelledby="tab-estate">
+        <figure class="map">
+          <img src="img/products/estate-1600.jpg" srcset="img/products/estate-900.jpg 900w, img/products/estate-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 62vw" width="1600" height="1067" loading="lazy" alt="Aerial view of a country estate with the boundary, woodland, parkland and an arable field marked as a map overlay">
+          <svg viewBox="0 0 1600 1067" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,380 140,445 150,480 250,520 320,600 380,700 410,840 330,1000 300,1067 0,1067" fill="#1f7a3a" fill-opacity="0.35" stroke="#9be3a8" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="700,520 820,520 1000,500 1180,470 1300,470 1350,500 1250,540 1160,600 1080,660 980,690 830,720 700,790 600,760 690,640" fill="#1f7a3a" fill-opacity="0.35" stroke="#9be3a8" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="140,445 330,420 560,398 700,410 720,470 700,520 690,600 580,690 470,760 410,840 380,700 320,600 250,520 150,480" fill="#5cc46a" fill-opacity="0.28" stroke="#d8ffd0" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="300,1067 420,960 560,870 700,790 830,720 980,690 1080,660 1160,600 1250,540 1350,500 1480,480 1600,520 1600,1067" fill="#e8b34a" fill-opacity="0.22" stroke="#ffe2a0" stroke-width="2" vector-effect="non-scaling-stroke"/><polyline class="ln" points="300,1067 420,960 560,870 700,790 830,720 980,690 1080,660 1160,600 1250,540 1350,500 1480,480 1460,430 1478,392" fill="none" stroke="#16262b" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/><polyline class="ln" points="300,1067 420,960 560,870 700,790 830,720 980,690 1080,660 1160,600 1250,540 1350,500 1480,480 1460,430 1478,392" fill="none" stroke="#ffcc33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="14 9"/><g class="pill" transform="translate(430,560)"><rect x="-130" y="-19" width="260" height="38" rx="19"/><circle cx="-102.1" cy="0" r="7" fill="#5cc46a"/><text x="8" y="1">Parkland · 6.2 ha</text></g><g class="pill" transform="translate(170,820)"><rect x="-136" y="-19" width="273" height="38" rx="19"/><circle cx="-108.39999999999998" cy="0" r="7" fill="#1f7a3a"/><text x="8" y="1">West wood · 4.1 ha</text></g><g class="pill" transform="translate(1010,580)"><rect x="-162" y="-19" width="323" height="38" rx="19"/><circle cx="-133.6" cy="0" r="7" fill="#1f7a3a"/><text x="8" y="1">Woodland belt · 2.8 ha</text></g><g class="pill" transform="translate(1120,900)"><rect x="-124" y="-19" width="248" height="38" rx="19"/><circle cx="-95.8" cy="0" r="7" fill="#e8b34a"/><text x="8" y="1">Arable · 21.5 ha</text></g><g class="pill" transform="translate(650,940)"><rect x="-180" y="-19" width="361" height="38" rx="19"/><circle cx="-152.5" cy="0" r="7" fill="#ffcc33"/><text x="8" y="1">Boundary checked · 2.4 km</text></g><g class="mk" transform="translate(790,430)"><circle r="19" fill="#ffcc33"/><text y="1">1</text></g><g class="mk" transform="translate(925,418)"><circle r="19" fill="#ffcc33"/><text y="1">2</text></g><g class="mk" transform="translate(410,600)"><circle r="19" fill="#ff5a4f"/><text y="1">3</text></g><g class="mk" transform="translate(1462,470)"><circle r="19" fill="#ffcc33"/><text y="1">4</text></g></svg>
+          <span class="sample">Example layout</span>
+        </figure>
+        <div class="pinfo">
+          <h3>Boundary and land map</h3>
+          <p>Your boundary, fields and woodland drawn over a clear aerial view, with the area of each parcel. Easy to share with a land agent, tenant or neighbour.</p>
+          <ul class="legend"><li><i style="background:#ffcc33"></i>Boundary</li><li><i style="background:#5cc46a"></i>Parkland</li><li><i style="background:#1f7a3a"></i>Woodland</li><li><i style="background:#e8b34a"></i>Arable</li></ul>
+          <ol class="map-key"><li><span>1</span>The house</li><li><span>2</span>Main drive</li><li><span>3</span>Tree flagged for a safety check</li><li><span>4</span>Field gate on the boundary</li></ol>
+          <h4>What you get</h4>
+          <ul class="gets"><li>Boundary line checked against what is on the ground</li><li>Area of every field and wood in hectares and acres</li><li>Trees, gates and features worth a closer look, pinned and numbered</li><li>Files for GIS and Google Earth, plus a printable PDF</li></ul>
+          <p class="for"><b>Good for:</b> estates, landowners, land agents, solicitors</p>
+        </div>
+      </div>
+      <div class="ppanel" role="tabpanel" id="panel-farm" aria-labelledby="tab-farm" hidden>
+        <figure class="map">
+          <img src="img/products/farm-1600.jpg" srcset="img/products/farm-900.jpg 900w, img/products/farm-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 62vw" width="1600" height="1067" loading="lazy" alt="Aerial view of a farm steading with each building outlined and coloured by roof condition, and the fields marked">
+          <svg viewBox="0 0 1600 1067" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,620 170,520 330,680 540,930 360,1067 0,1067" fill="#5cc46a" fill-opacity="0.22" stroke="#d8ffd0" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="700,720 950,670 1150,585 1600,610 1600,1067 360,1067 540,930" fill="#5cc46a" fill-opacity="0.18" stroke="#d8ffd0" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="410,400 460,300 560,280 700,215 750,215 860,300 940,380 870,460 800,520 800,640 670,680 600,600 500,560 420,460" fill="#ff8a1f" fill-opacity="0.25" stroke="#ff8a1f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><polygon points="920,105 1080,62 1225,165 1225,215 1060,270 920,200" fill="#5cc46a" fill-opacity="0.28" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><polygon points="1080,385 1200,330 1400,385 1400,440 1210,470 1080,470" fill="#ff5a4f" fill-opacity="0.32" stroke="#ff5a4f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><polygon points="1250,300 1340,215 1600,280 1600,420 1440,410 1400,385" fill="#ff8a1f" fill-opacity="0.25" stroke="#ff8a1f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><polygon points="1270,20 1310,5 1480,60 1470,95 1300,95" fill="#ff8a1f" fill-opacity="0.25" stroke="#ff8a1f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><polyline class="ln" points="0,560 200,470 420,360 600,262 800,192 900,160" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="3 9"/><polyline class="ln" points="170,520 330,680 540,930" fill="none" stroke="#ffcc33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="12 8"/><g class="pill" transform="translate(170,760)"><rect x="-124" y="-19" width="248" height="38" rx="19"/><circle cx="-95.8" cy="0" r="7" fill="#5cc46a"/><text x="8" y="1">Paddock · 1.3 ha</text></g><g class="pill" transform="translate(1050,880)"><rect x="-124" y="-19" width="248" height="38" rx="19"/><circle cx="-95.8" cy="0" r="7" fill="#5cc46a"/><text x="8" y="1">Grazing · 4.6 ha</text></g><g class="pill" transform="translate(1075,150)"><rect x="-149" y="-19" width="298" height="38" rx="19"/><circle cx="-121.0" cy="0" r="7" fill="#5cc46a"/><text x="8" y="1">Shed A · 640 m² roof</text></g><g class="pill" transform="translate(640,450)"><rect x="-174" y="-19" width="348" height="38" rx="19"/><circle cx="-146.2" cy="0" r="7" fill="#ff8a1f"/><text x="8" y="1">Steading · roof 1,120 m²</text></g><g class="pill" transform="translate(260,445)"><rect x="-84" y="-19" width="169" height="38" rx="19"/><text x="0" y="1">Access road</text></g><g class="mk" transform="translate(1150,420)"><circle r="19" fill="#ff5a4f"/><text y="1">1</text></g><g class="mk" transform="translate(1480,340)"><circle r="19" fill="#ff8a1f"/><text y="1">2</text></g><g class="mk" transform="translate(700,300)"><circle r="19" fill="#ff8a1f"/><text y="1">3</text></g><g class="mk" transform="translate(360,760)"><circle r="19" fill="#ffcc33"/><text y="1">4</text></g><g class="mk" transform="translate(1130,575)"><circle r="19" fill="#ffcc33"/><text y="1">5</text></g></svg>
+          <span class="sample">Example layout</span>
+        </figure>
+        <div class="pinfo">
+          <h3>Farm buildings and roof report</h3>
+          <p>Every building and field on one page, with roofs graded from the air. No ladders, no one on the roof, and a clear list of what needs fixing first.</p>
+          <ul class="legend"><li><i style="background:#ff5a4f"></i>Roof: fix soon</li><li><i style="background:#ff8a1f"></i>Roof: keep an eye on</li><li><i style="background:#5cc46a"></i>Roof: good</li><li><i style="background:#ffcc33"></i>Fence to repair</li></ul>
+          <ol class="map-key"><li><span>1</span>Rusted sheets and holes</li><li><span>2</span>Cracked fibre-cement sheets</li><li><span>3</span>Moss and slipped slates</li><li><span>4</span>Fence line to repair, about 160 m</li><li><span>5</span>Field gate</li></ol>
+          <h4>What you get</h4>
+          <ul class="gets"><li>Roof area and condition for every building, graded red, amber and green</li><li>Close-up photos of each problem, pinned on the map</li><li>Field areas and fence lengths for grants and records</li><li>A simple report you can hand to a builder or insurer</li></ul>
+          <p class="for"><b>Good for:</b> farms, steadings, rural businesses, insurers</p>
+        </div>
+      </div>
+      <div class="ppanel" role="tabpanel" id="panel-site" aria-labelledby="tab-site" hidden>
+        <figure class="map">
+          <img src="img/products/site-1600.jpg" srcset="img/products/site-900.jpg 900w, img/products/site-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 62vw" width="1600" height="1067" loading="lazy" alt="Straight-down drone map of a housing site with every plot coloured by build stage, the site compound and haul road marked">
+          <svg viewBox="0 0 1600 1067" preserveAspectRatio="none" aria-hidden="true"><polygon points="1040,430 1250,405 1320,560 1400,650 1400,880 1190,880 1100,720 1040,600" fill="#b48cff" fill-opacity="0.18" stroke="#b48cff" stroke-width="2" vector-effect="non-scaling-stroke" stroke-dasharray="10 7"/><polygon points="20,390 150,370 170,560 60,640 10,600" fill="#b48cff" fill-opacity="0.18" stroke="#b48cff" stroke-width="2" vector-effect="non-scaling-stroke" stroke-dasharray="10 7"/><polyline class="ln" points="1050,1067 860,700 790,560 800,440 870,395 1100,410 1330,430" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="3 9"/><polyline class="ln" points="0,600 100,400 210,280 300,246 560,116 758,10 900,100 1050,195 1150,335 1380,605 1600,925" fill="none" stroke="#16262b" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/><polyline class="ln" points="0,600 100,400 210,280 300,246 560,116 758,10 900,100 1050,195 1150,335 1380,605 1600,925" fill="none" stroke="#ffcc33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="14 9"/><polygon points="705,25 780,5 845,140 775,170" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="776" y="85">1</text><polygon points="548,215 625,180 690,240 615,290" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="620" y="231">2</text><polygon points="440,305 510,270 555,345 480,390" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="496" y="328">3</text><polygon points="370,330 430,300 470,385 405,420" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="419" y="359">4</text><polygon points="300,385 365,360 400,440 330,470" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="349" y="414">5</text><polygon points="850,250 915,225 965,320 900,345" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="908" y="285">6</text><polygon points="995,290 1135,265 1145,330 1005,360" fill="#5cc46a" fill-opacity="0.45" stroke="#5cc46a" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="1070" y="311">7</text><polygon points="600,445 680,425 705,510 620,535" fill="#ffcc33" fill-opacity="0.45" stroke="#ffcc33" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="651" y="479">8</text><polygon points="835,525 930,500 950,610 855,635" fill="#ffcc33" fill-opacity="0.45" stroke="#ffcc33" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="892" y="568">9</text><polygon points="650,605 745,590 765,700 665,715" fill="#ffcc33" fill-opacity="0.45" stroke="#ffcc33" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="706" y="652">10</text><polygon points="640,330 745,320 790,445 700,470" fill="#ffcc33" fill-opacity="0.45" stroke="#ffcc33" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="719" y="391">11</text><polygon points="895,655 1000,640 1035,745 925,760" fill="#ff8a1f" fill-opacity="0.45" stroke="#ff8a1f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="964" y="700">12</text><polygon points="945,755 1050,745 1060,830 960,840" fill="#ff8a1f" fill-opacity="0.45" stroke="#ff8a1f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="1004" y="792">13</text><polygon points="795,805 905,800 920,915 805,920" fill="#ff8a1f" fill-opacity="0.45" stroke="#ff8a1f" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="856" y="860">14</text><polygon points="728,728 790,728 790,790 728,790" fill="#4aa3ff" fill-opacity="0.45" stroke="#4aa3ff" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="759" y="759">15</text><polygon points="1015,860 1095,850 1100,915 1020,920" fill="#4aa3ff" fill-opacity="0.45" stroke="#4aa3ff" stroke-width="2.5" vector-effect="non-scaling-stroke"/><text class="plotno" x="1058" y="886">16</text><g class="pill" transform="translate(1230,760)"><rect x="-105" y="-19" width="210" height="38" rx="19"/><circle cx="-76.89999999999999" cy="0" r="7" fill="#b48cff"/><text x="8" y="1">Site compound</text></g><g class="pill" transform="translate(120,680)"><rect x="-80" y="-19" width="159" height="38" rx="19"/><circle cx="-51.69999999999999" cy="0" r="7" fill="#b48cff"/><text x="8" y="1">Materials</text></g><g class="pill" transform="translate(905,470)"><rect x="-118" y="-19" width="235" height="38" rx="19"/><circle cx="-89.5" cy="0" r="7" fill="#ffcc33"/><text x="8" y="1">Plot 9 · 194 m²</text></g><g class="north" transform="translate(60,70)"><circle r="30"/><path d="M0,-22 L10,8 L0,2 L-10,8 Z"/><text y="22">N</text></g><g class="scale" transform="translate(70,1030)"><rect x="-12" y="-30" width="174.12952100708105" height="50" rx="8"/><path d="M0,0 h75.06476050354053 v-8 h-75.06476050354053 Z" fill="#fff"/><path d="M75.06476050354053,0 h75.06476050354053 v-8 h-75.06476050354053 Z" fill="#16262b" stroke="#fff" stroke-width="1.5"/><text x="75.06476050354053" y="-14">20 m</text></g></svg>
+          <span class="sample">Example layout</span>
+        </figure>
+        <div class="pinfo">
+          <h3>Site progress map</h3>
+          <p>A measured, straight-down map of the whole site on every visit, with each plot coloured by stage. Built from a real 2 cm survey, so the scale bar and the areas are true.</p>
+          <ul class="legend"><li><i style="background:#5cc46a"></i>Finished</li><li><i style="background:#ffcc33"></i>Roof on</li><li><i style="background:#ff8a1f"></i>Timber frame</li><li><i style="background:#4aa3ff"></i>Foundations</li><li><i style="background:#b48cff"></i>Compound and storage</li></ul>
+          <ul class="map-notes"><li>Numbers are plot numbers</li><li>Dashed white line is the haul road</li><li>Scale bar and north arrow are true to the survey</li></ul>
+          <h4>What you get</h4>
+          <ul class="gets"><li>Measured map you can scale from, to about 2 cm a pixel</li><li>Plots coloured by stage, so progress is clear at a glance</li><li>Stockpile volumes and areas on request</li><li>Same flight path every visit, so maps line up month to month</li></ul>
+          <p class="for"><b>Good for:</b> house builders, developers, project managers, funders</p>
+        </div>
+      </div>
+      <div class="ppanel" role="tabpanel" id="panel-care" aria-labelledby="tab-care" hidden>
+        <figure class="map">
+          <img src="img/products/care-1600.jpg" srcset="img/products/care-900.jpg 900w, img/products/care-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 62vw" width="1600" height="1067" loading="lazy" alt="Aerial view of a large house in its grounds with the building, parking, fire access route, assembly point and roof issues marked">
+          <svg viewBox="0 0 1600 1067" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,770 330,640 800,500 990,460 1060,560 1100,700 1300,780 1260,1067 0,1067" fill="#ffcc33" fill-opacity="0.0" stroke="#ffcc33" stroke-width="4" vector-effect="non-scaling-stroke" stroke-dasharray="14 9"/><polygon points="60,830 250,800 320,960 380,1060 60,1060" fill="#5cc46a" fill-opacity="0.25" stroke="#d8ffd0" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="300,740 470,720 460,800 480,900 500,980 560,1060 380,1060 320,960 280,840" fill="#c9d1d3" fill-opacity="0.3" stroke="#c9d1d3" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="455,780 540,700 560,600 600,560 830,500 900,480 990,500 970,640 930,700 940,800 860,860 760,1000 640,1010 500,960 480,880" fill="#5fd3e6" fill-opacity="0.16" stroke="#5fd3e6" stroke-width="3" vector-effect="non-scaling-stroke"/><polyline class="ln" points="0,835 250,775 330,790 420,850" fill="none" stroke="#16262b" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/><polyline class="ln" points="0,835 250,775 330,790 420,850" fill="none" stroke="#ff5a4f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="14 8"/><g class="ap" transform="translate(165,955)"><rect x="-26" y="-26" width="52" height="52" rx="6"/><path d="M-12,8 L0,-12 L12,8 Z"/></g><g class="pill" transform="translate(175,1022)"><rect x="-143" y="-19" width="285" height="38" rx="19"/><circle cx="-114.69999999999999" cy="0" r="7" fill="#22a845"/><text x="8" y="1">Fire assembly point</text></g><g class="pill" transform="translate(140,740)"><rect x="-136" y="-19" width="273" height="38" rx="19"/><circle cx="-108.39999999999998" cy="0" r="7" fill="#ff5a4f"/><text x="8" y="1">Fire engine access</text></g><g class="pill" transform="translate(720,450)"><rect x="-206" y="-19" width="411" height="38" rx="19"/><circle cx="-177.7" cy="0" r="7" fill="#5fd3e6"/><text x="8" y="1">Main building · 1,450 m² roof</text></g><g class="pill" transform="translate(420,1020)"><rect x="-59" y="-19" width="118" height="38" rx="19"/><text x="0" y="1">Parking</text></g><g class="pill" transform="translate(1150,960)"><rect x="-124" y="-19" width="248" height="38" rx="19"/><circle cx="-95.8" cy="0" r="7" fill="#ffcc33"/><text x="8" y="1">Grounds · 1.9 ha</text></g><g class="mk" transform="translate(560,770)"><circle r="19" fill="#ff8a1f"/><text y="1">1</text></g><g class="mk" transform="translate(700,760)"><circle r="19" fill="#ff5a4f"/><text y="1">2</text></g><g class="mk" transform="translate(905,690)"><circle r="19" fill="#ff8a1f"/><text y="1">3</text></g><g class="mk" transform="translate(1010,560)"><circle r="19" fill="#ffcc33"/><text y="1">4</text></g></svg>
+          <span class="sample">Example layout</span>
+        </figure>
+        <div class="pinfo">
+          <h3>Grounds and safety plan</h3>
+          <p>A clear, up-to-date plan of the building and grounds for fire plans, inspections and contractors, plus a roof check without scaffolding.</p>
+          <ul class="legend"><li><i style="background:#5fd3e6"></i>Building</li><li><i style="background:#ff5a4f"></i>Fire engine access</li><li><i style="background:#22a845"></i>Assembly point</li><li><i style="background:#ffcc33"></i>Grounds boundary</li></ul>
+          <ol class="map-key"><li><span>1</span>Chimney pointing worn</li><li><span>2</span>Slipped slates over the bay</li><li><span>3</span>Lead flashing to check</li><li><span>4</span>Tree within 10 m of the building</li></ol>
+          <h4>What you get</h4>
+          <ul class="gets"><li>Aerial site plan with access, parking and assembly points</li><li>Roof and chimney check, with close-up photos</li><li>Trees near the building flagged for a closer look</li><li>360 tour of rooms for families, guests or new staff</li></ul>
+          <p class="for"><b>Good for:</b> care homes, hotels, schools, venues</p>
+        </div>
+      </div>
+      <div class="ppanel" role="tabpanel" id="panel-holiday" aria-labelledby="tab-holiday" hidden>
+        <figure class="map">
+          <img src="img/products/holiday-1600.jpg" srcset="img/products/holiday-900.jpg 900w, img/products/holiday-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 62vw" width="1600" height="1067" loading="lazy" alt="Aerial view of a white cottage above a turquoise bay, with the garden, shore line, track and distances marked">
+          <svg viewBox="0 0 1600 1067" preserveAspectRatio="none" aria-hidden="true"><polygon points="520,300 600,230 720,225 800,265 860,330 840,405 560,415 500,360" fill="#5cc46a" fill-opacity="0.25" stroke="#d8ffd0" stroke-width="3" vector-effect="non-scaling-stroke" stroke-dasharray="10 7"/><polyline class="ln" points="0,512 300,488 600,452 900,445 1150,470 1330,488 1600,512" fill="none" stroke="#16262b" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/><polyline class="ln" points="0,512 300,488 600,452 900,445 1150,470 1330,488 1600,512" fill="none" stroke="#4aa3ff" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="14 9"/><polyline class="ln" points="1000,0 900,150 830,240 790,262" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="3 9"/><g class="dim"><polyline class="ln" points="655,300 655,690" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="2 5"/><circle cx="655" cy="300" r="5" fill="#fff"/><circle cx="655" cy="690" r="5" fill="#fff"/></g><g class="pill" transform="translate(655,495)"><rect x="-135" y="-19" width="269" height="38" rx="19"/><text x="0" y="1">House to sea · 85 m</text></g><g class="pill" transform="translate(430,210)"><rect x="-118" y="-19" width="235" height="38" rx="19"/><circle cx="-89.5" cy="0" r="7" fill="#5cc46a"/><text x="8" y="1">Garden · 0.3 ha</text></g><g class="pill" transform="translate(1180,545)"><rect x="-162" y="-19" width="323" height="38" rx="19"/><circle cx="-133.6" cy="0" r="7" fill="#4aa3ff"/><text x="8" y="1">Shore boundary · 420 m</text></g><g class="pill" transform="translate(1080,120)"><rect x="-84" y="-19" width="169" height="38" rx="19"/><text x="0" y="1">Footpath in</text></g><g class="mk" transform="translate(655,255)"><circle r="19" fill="#ffcc33"/><text y="1">1</text></g><g class="mk" transform="translate(1230,420)"><circle r="19" fill="#ffcc33"/><text y="1">2</text></g><g class="mk" transform="translate(1310,700)"><circle r="19" fill="#ffcc33"/><text y="1">3</text></g><g class="mk" transform="translate(470,360)"><circle r="19" fill="#ffcc33"/><text y="1">4</text></g></svg>
+          <span class="sample">Example layout</span>
+        </figure>
+        <div class="pinfo">
+          <h3>Property sale and guest map</h3>
+          <p>Show buyers or guests exactly what comes with the property: the land, the shore, the walk to the beach and how to get there.</p>
+          <ul class="legend"><li><i style="background:#5cc46a"></i>Garden</li><li><i style="background:#4aa3ff"></i>Shore line</li><li><i style="background:#ffffff"></i>Track</li></ul>
+          <ol class="map-key"><li><span>1</span>Cottage</li><li><span>2</span>Boathouse</li><li><span>3</span>Slipway</li><li><span>4</span>Burn for the water supply</li></ol>
+          <h4>What you get</h4>
+          <ul class="gets"><li>Land and garden marked, with areas</li><li>Distances that matter: to the beach, the road, the village</li><li>Labelled aerial photos and a short film for the listing</li><li>A 360 tour so guests can look round before they book</li></ul>
+          <p class="for"><b>Good for:</b> holiday lets, estate agents, sellers, glamping sites</p>
+        </div>
+      </div>
+    </div>
+    <div class="golf">
+      <h3>Golf courses</h3>
+      <p>Hole-by-hole flyover films, an up-to-date course map for greenkeeping, and tree, bunker and drainage surveys from the air. Ask about a free sample flight over one hole of your course.</p>
+      <a class="btn lamp" href="#contact">Ask about a sample</a>
+    </div>
+    <h3 class="sub">From real jobs</h3>
     <div class="mosaic">
       <figure class="m-wide"><img src="img/parkhill-boundary-2000.jpg" srcset="img/parkhill-boundary-1000.jpg 1000w, img/parkhill-boundary-2000.jpg 2000w" sizes="100vw" width="2000" height="676" loading="lazy" alt="Aerial panorama of farmland with the estate boundary drawn as a yellow line"><figcaption>Park Hill: the estate boundary marked on an aerial panorama, 2025</figcaption></figure>
-      <figure class="m-third contain"><img src="img/work/height-map-1200.jpg" width="1200" height="766" loading="lazy" alt="Colour-shaded height map of a hillside site, from blue for low ground to red for high"><figcaption>Ground height map from a drone survey</figcaption></figure>
-      <figure class="m-third contain"><img src="img/work/tower-3d-500.jpg" width="500" height="500" loading="lazy" alt="3D model of an old stone tower on a grassy hill"><figcaption>3D model of a stone tower</figcaption></figure>
-      <figure class="m-third"><img src="img/work/site-topdown-800.jpg" srcset="img/work/site-topdown-800.jpg 800w, img/work/site-topdown-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 33vw" width="1600" height="1068" loading="lazy" alt="Straight-down aerial photo of diggers working on a construction site"><figcaption>Construction site from straight above</figcaption></figure>
+      <figure class="m-half contain"><img src="img/work/height-map-1200.jpg" width="1200" height="766" loading="lazy" alt="Colour-shaded height map of a hillside site, from blue for low ground to red for high"><figcaption>Ground height map from a drone survey</figcaption></figure>
+      <figure class="m-half contain"><img src="img/work/tower-3d-500.jpg" width="500" height="500" loading="lazy" alt="3D model of an old stone tower on a grassy hill"><figcaption>3D model of a stone tower</figcaption></figure>
     </div>
     <ul class="land-points">
       <li><b>Boundaries</b>Your land lines drawn on clear aerial images, for owners, agents and neighbours.</li>
@@ -470,11 +600,12 @@ footer a{color:#cddbd7}
       <p>Most jobs start with one of these.</p>
     </div>
     <div class="who-grid">
-      <div class="who"><h3>Selling or letting</h3><p>A 360 tour plus aerials lets buyers walk round before they book a viewing.</p></div>
-      <div class="who"><h3>Holiday lets and venues</h3><p>Guests can see the rooms, the grounds and the view before they book.</p></div>
-      <div class="who"><h3>Builds and renovations</h3><p>Regular 360s show progress to clients and owners who can't be on site.</p></div>
-      <div class="who"><h3>Architects and planners</h3><p>Site maps, 3D and context photos before design starts.</p></div>
-      <div class="who"><h3>Estates and land</h3><p>Boundaries, woodland and coastline mapped and photographed.</p></div>
+      <div class="who"><h3>Estates and farms</h3><p>Boundaries, field areas, woodland and roof checks, mapped from the air.</p></div>
+      <div class="who"><h3>Golf courses</h3><p>Hole flyovers, course maps for greenkeeping and tree surveys.</p></div>
+      <div class="who"><h3>Holiday lets and homes for sale</h3><p>A 360 tour, aerial photos and a map of the land, so people can see it all before they visit.</p></div>
+      <div class="who"><h3>Care homes and hotels</h3><p>Grounds and safety plans, roof checks without scaffolding, and tours for families and guests.</p></div>
+      <div class="who"><h3>Builders and developers</h3><p>Matching 360s and site maps on every visit to show progress to clients and funders.</p></div>
+      <div class="who"><h3>Architects and planners</h3><p>Site maps, heights, 3D and context photos before design starts.</p></div>
     </div>
   </div>
 </section>
@@ -733,6 +864,16 @@ footer a{color:#cddbd7}
       }
       current=next;
     });
+  });
+
+  // example map product tabs
+  var ptabs=[].slice.call(document.querySelectorAll('.ptab'));
+  function showTab(t){
+    ptabs.forEach(function(x){ var on=x===t; x.setAttribute('aria-selected',on?'true':'false'); x.tabIndex=on?0:-1; document.getElementById(x.getAttribute('aria-controls')).hidden=!on; });
+  }
+  ptabs.forEach(function(t,i){
+    t.addEventListener('click',function(){ showTab(t); });
+    t.addEventListener('keydown',function(e){ var k=e.key, n=null; if(k==='ArrowRight')n=ptabs[(i+1)%ptabs.length]; if(k==='ArrowLeft')n=ptabs[(i-1+ptabs.length)%ptabs.length]; if(n){ e.preventDefault(); showTab(n); n.focus(); } });
   });
 
   // film
