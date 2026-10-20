@@ -1,0 +1,2129 @@
+<krpano version="1.24" title="Park Hill | 360° tour by Fidra Media">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="openstreetmaps"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="true"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               deeplinking="true"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x16262B"
+	               design_bgalpha="0.82"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xD99A27 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#EFE6D3; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+	
+
+	
+	<scene name="scene_p002" title="Aerial view over the estate" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p002.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p002.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p002.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1280,2560,5120" />
+		</image>
+
+	
+		<hotspot name="go_p001" style="skin_hotspotstyle" ath="-150.86" atv="2.59" linkedscene="scene_p001" tooltip="Aerial view of the house (Apr 2022)" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-170.94" atv="-0.65" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+		<hotspot name="go_p009" style="skin_hotspotstyle" ath="-157.34" atv="66.04" linkedscene="scene_p009" tooltip="Garden terrace (Dec 2023)" />
+		<hotspot name="go_p010" style="skin_hotspotstyle" ath="-106.19" atv="51.8" linkedscene="scene_p010" tooltip="West lawn (Dec 2023)" />
+		<hotspot name="go_p007" style="skin_hotspotstyle" ath="135.96" atv="70.85" linkedscene="scene_p007" tooltip="Back courtyard (Dec 2023)" />
+	</scene>
+	<scene name="scene_p001" title="Aerial view of the house (Apr 2022)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p001.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p001.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p001.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1280,2560,5248" />
+		</image>
+
+	
+		<hotspot name="go_p002" style="skin_hotspotstyle" ath="-1.29" atv="1.94" linkedscene="scene_p002" tooltip="Aerial view over the estate" />
+		<hotspot name="go_p004" style="skin_hotspotstyle" ath="-1.91" atv="74.68" linkedscene="scene_p004" tooltip="Courtyard and drive (Apr 2020)" />
+		<hotspot name="go_p005" style="skin_hotspotstyle" ath="44.04" atv="44.04" linkedscene="scene_p005" tooltip="Front of the house (Dec 2023)" />
+		<hotspot name="go_p011" style="skin_hotspotstyle" ath="-36.91" atv="40.14" linkedscene="scene_p011" tooltip="Bay windows (Dec 2023)" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="156.75" atv="-7.75" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+		<hotspot name="go_p019" style="skin_hotspotstyle" ath="-165.11" atv="53.74" linkedscene="scene_p019" tooltip="Main drive" />
+		<hotspot name="go_p012" style="skin_hotspotstyle" ath="168.99" atv="17.48" linkedscene="scene_p012" tooltip="Walled garden gate" />
+	</scene>
+	<scene name="scene_p003" title="Aerial view over the farm" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p003.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p003.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p003.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1280,2560,5120" />
+		</image>
+
+	
+		<hotspot name="go_p002" style="skin_hotspotstyle" ath="-109.15" atv="-17.23" linkedscene="scene_p002" tooltip="Aerial view over the estate" />
+		<hotspot name="go_p001" style="skin_hotspotstyle" ath="-153.19" atv="-17.23" linkedscene="scene_p001" tooltip="Aerial view of the house (Apr 2022)" />
+		<hotspot name="go_p013" style="skin_hotspotstyle" ath="34.47" atv="65.11" linkedscene="scene_p013" tooltip="Walled garden sheds" />
+		<hotspot name="go_p015" style="skin_hotspotstyle" ath="-139.79" atv="57.45" linkedscene="scene_p015" tooltip="Walled garden bench" />
+		<hotspot name="go_p016" style="skin_hotspotstyle" ath="-57.45" atv="53.62" linkedscene="scene_p016" tooltip="Pool under construction" />
+	</scene>
+	<scene name="scene_p004" title="Courtyard and drive (Apr 2020)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p004.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p004.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p004.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p001" style="skin_hotspotstyle" ath="7.07" atv="-78.95" linkedscene="scene_p001" tooltip="Aerial view of the house (Apr 2022)" />
+		<hotspot name="go_p038" style="skin_hotspotstyle" ath="11.79" atv="-7.89" linkedscene="scene_p038" tooltip="Front porch" />
+		<hotspot name="go_p005" style="skin_hotspotstyle" ath="82.53" atv="-6.32" linkedscene="scene_p005" tooltip="Front of the house (Dec 2023)" />
+		<hotspot name="go_p011" style="skin_hotspotstyle" ath="-80.96" atv="-3.16" linkedscene="scene_p011" tooltip="Bay windows (Dec 2023)" />
+	</scene>
+	<scene name="scene_p005" title="Front of the house (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p005.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p005.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p005.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p004" style="skin_hotspotstyle" ath="19.65" atv="-3.16" linkedscene="scene_p004" tooltip="Courtyard and drive (Apr 2020)" />
+		<hotspot name="go_p006" style="skin_hotspotstyle" ath="-173.71" atv="-6.32" linkedscene="scene_p006" tooltip="Side garden (Dec 2023)" />
+	</scene>
+	<scene name="scene_p006" title="Side garden (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p006.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p006.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p006.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p005" style="skin_hotspotstyle" ath="40.09" atv="6.32" linkedscene="scene_p005" tooltip="Front of the house (Dec 2023)" />
+		<hotspot name="go_p007" style="skin_hotspotstyle" ath="-161.14" atv="4.74" linkedscene="scene_p007" tooltip="Back courtyard (Dec 2023)" />
+	</scene>
+	<scene name="scene_p007" title="Back courtyard (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p007.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p007.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p007.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p006" style="skin_hotspotstyle" ath="47.95" atv="3.16" linkedscene="scene_p006" tooltip="Side garden (Dec 2023)" />
+		<hotspot name="go_p008" style="skin_hotspotstyle" ath="172.14" atv="0.0" linkedscene="scene_p008" tooltip="Round tower (Dec 2023)" />
+	</scene>
+	<scene name="scene_p008" title="Round tower (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p008.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p008.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p008.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p007" style="skin_hotspotstyle" ath="79.39" atv="0.0" linkedscene="scene_p007" tooltip="Back courtyard (Dec 2023)" />
+		<hotspot name="go_p009" style="skin_hotspotstyle" ath="166.43" atv="-3.88" linkedscene="scene_p009" tooltip="Garden terrace (Dec 2023)" />
+		<hotspot name="go_p010" style="skin_hotspotstyle" ath="-109.26" atv="0.0" linkedscene="scene_p010" tooltip="West lawn (Dec 2023)" />
+		<hotspot name="go_p002" style="skin_hotspotstyle" ath="145.41" atv="-74.21" linkedscene="scene_p002" tooltip="Aerial view over the estate" />
+	</scene>
+	<scene name="scene_p009" title="Garden terrace (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p009.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p009.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p009.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p008" style="skin_hotspotstyle" ath="5.5" atv="6.32" linkedscene="scene_p008" tooltip="Round tower (Dec 2023)" />
+		<hotspot name="go_p010" style="skin_hotspotstyle" ath="-47.95" atv="9.47" linkedscene="scene_p010" tooltip="West lawn (Dec 2023)" />
+		<hotspot name="go_p002" style="skin_hotspotstyle" ath="11.79" atv="-63.16" linkedscene="scene_p002" tooltip="Aerial view over the estate" />
+		<hotspot name="go_p054" style="skin_hotspotstyle" ath="178.71" atv="-3.24" linkedscene="scene_p054" tooltip="China pantry" />
+		<hotspot name="go_p007" style="skin_hotspotstyle" ath="71.53" atv="0.0" linkedscene="scene_p007" tooltip="Back courtyard (Dec 2023)" />
+		<hotspot name="go_p048" style="skin_hotspotstyle" ath="-96.62" atv="-3.24" linkedscene="scene_p048" tooltip="Dining room, garden door" />
+	</scene>
+	<scene name="scene_p010" title="West lawn (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p010.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p010.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p010.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p009" style="skin_hotspotstyle" ath="137.55" atv="-15.79" linkedscene="scene_p009" tooltip="Garden terrace (Dec 2023)" />
+		<hotspot name="go_p011" style="skin_hotspotstyle" ath="-110.83" atv="-7.89" linkedscene="scene_p011" tooltip="Bay windows (Dec 2023)" />
+	</scene>
+	<scene name="scene_p011" title="Bay windows (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p011.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p011.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p011.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p010" style="skin_hotspotstyle" ath="-8.65" atv="-3.16" linkedscene="scene_p010" tooltip="West lawn (Dec 2023)" />
+		<hotspot name="go_p004" style="skin_hotspotstyle" ath="176.86" atv="-1.58" linkedscene="scene_p004" tooltip="Courtyard and drive (Apr 2020)" />
+	</scene>
+	<scene name="scene_p012" title="Walled garden gate" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p012.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p012.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p012.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p015" style="skin_hotspotstyle" ath="14.93" atv="3.16" linkedscene="scene_p015" tooltip="Walled garden bench" />
+		<hotspot name="go_p022" style="skin_hotspotstyle" ath="-170.57" atv="9.47" linkedscene="scene_p022" tooltip="Stable yard" />
+		<hotspot name="go_p026" style="skin_hotspotstyle" ath="123.41" atv="4.74" linkedscene="scene_p026" tooltip="Stable block" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="38.52" atv="-69.47" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p013" title="Walled garden sheds" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p013.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p013.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p017" style="skin_hotspotstyle" ath="-74.67" atv="1.58" linkedscene="scene_p017" tooltip="New pool" />
+		<hotspot name="go_p016" style="skin_hotspotstyle" ath="-175.28" atv="-3.16" linkedscene="scene_p016" tooltip="Pool under construction" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-113.97" atv="-75.79" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p014" title="Walled garden" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p014.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p014.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p014.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p013" style="skin_hotspotstyle" ath="115.55" atv="-1.58" linkedscene="scene_p013" tooltip="Walled garden sheds" />
+		<hotspot name="go_p016" style="skin_hotspotstyle" ath="19.65" atv="-6.32" linkedscene="scene_p016" tooltip="Pool under construction" />
+		<hotspot name="go_p015" style="skin_hotspotstyle" ath="-52.66" atv="0.0" linkedscene="scene_p015" tooltip="Walled garden bench" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="44.8" atv="-60.0" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p015" title="Walled garden bench" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p015.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p015.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p015.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p012" style="skin_hotspotstyle" ath="173.71" atv="11.05" linkedscene="scene_p012" tooltip="Walled garden gate" />
+		<hotspot name="go_p016" style="skin_hotspotstyle" ath="5.5" atv="-6.32" linkedscene="scene_p016" tooltip="Pool under construction" />
+		<hotspot name="go_p018" style="skin_hotspotstyle" ath="69.96" atv="-1.58" linkedscene="scene_p018" tooltip="Walled garden, east" />
+	</scene>
+	<scene name="scene_p016" title="Pool under construction" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p016.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p016.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p016.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p015" style="skin_hotspotstyle" ath="110.83" atv="3.16" linkedscene="scene_p015" tooltip="Walled garden bench" />
+		<hotspot name="go_p017" style="skin_hotspotstyle" ath="-18.08" atv="0.0" linkedscene="scene_p017" tooltip="New pool" />
+		<hotspot name="go_p014" style="skin_hotspotstyle" ath="47.95" atv="-1.58" linkedscene="scene_p014" tooltip="Walled garden" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="38.52" atv="-60.0" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p017" title="New pool" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p017.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p017.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p017.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p013" style="skin_hotspotstyle" ath="-30.66" atv="7.89" linkedscene="scene_p013" tooltip="Walled garden sheds" />
+		<hotspot name="go_p016" style="skin_hotspotstyle" ath="25.94" atv="0.0" linkedscene="scene_p016" tooltip="Pool under construction" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-8.65" atv="-34.74" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p018" title="Walled garden, east" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p018.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p018.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p018.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p015" style="skin_hotspotstyle" ath="-57.38" atv="3.16" linkedscene="scene_p015" tooltip="Walled garden bench" />
+		<hotspot name="go_p014" style="skin_hotspotstyle" ath="41.66" atv="-4.74" linkedscene="scene_p014" tooltip="Walled garden" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="8.65" atv="-63.16" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p019" title="Main drive" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p019.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p019.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p019.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p004" style="skin_hotspotstyle" ath="-162.71" atv="-1.58" linkedscene="scene_p004" tooltip="Courtyard and drive (Apr 2020)" />
+		<hotspot name="go_p020" style="skin_hotspotstyle" ath="22.79" atv="-1.58" linkedscene="scene_p020" tooltip="Paddock drive" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-32.23" atv="-39.47" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p020" title="Paddock drive" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p020.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p020.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p020.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p019" style="skin_hotspotstyle" ath="-162.71" atv="-4.74" linkedscene="scene_p019" tooltip="Main drive" />
+		<hotspot name="go_p024" style="skin_hotspotstyle" ath="21.22" atv="1.58" linkedscene="scene_p024" tooltip="Lane by the paddock" />
+	</scene>
+	<scene name="scene_p021" title="Woodland path" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p021.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p021.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p021.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p024" style="skin_hotspotstyle" ath="121.83" atv="-1.58" linkedscene="scene_p024" tooltip="Lane by the paddock" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-170.57" atv="-47.37" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p022" title="Stable yard" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p022.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p022.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p022.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p026" style="skin_hotspotstyle" ath="24.37" atv="4.74" linkedscene="scene_p026" tooltip="Stable block" />
+		<hotspot name="go_p025" style="skin_hotspotstyle" ath="172.14" atv="-1.58" linkedscene="scene_p025" tooltip="Lane to the stables" />
+		<hotspot name="go_p012" style="skin_hotspotstyle" ath="-16.51" atv="1.58" linkedscene="scene_p012" tooltip="Walled garden gate" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-5.5" atv="-69.47" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p023" title="Old stables" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p023.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p023.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p023.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p027" style="skin_hotspotstyle" ath="18.08" atv="3.16" linkedscene="scene_p027" tooltip="Inside the stables" />
+		<hotspot name="go_p026" style="skin_hotspotstyle" ath="-148.56" atv="1.58" linkedscene="scene_p026" tooltip="Stable block" />
+	</scene>
+	<scene name="scene_p024" title="Lane by the paddock" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p024.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p024.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p024.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p020" style="skin_hotspotstyle" ath="172.14" atv="-6.32" linkedscene="scene_p020" tooltip="Paddock drive" />
+		<hotspot name="go_p025" style="skin_hotspotstyle" ath="-88.82" atv="-3.16" linkedscene="scene_p025" tooltip="Lane to the stables" />
+		<hotspot name="go_p021" style="skin_hotspotstyle" ath="32.23" atv="-3.16" linkedscene="scene_p021" tooltip="Woodland path" />
+		<hotspot name="go_p003" style="skin_hotspotstyle" ath="-85.68" atv="-53.68" linkedscene="scene_p003" tooltip="Aerial view over the farm" />
+	</scene>
+	<scene name="scene_p025" title="Lane to the stables" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p025.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p025.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p025.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p022" style="skin_hotspotstyle" ath="-3.93" atv="-6.32" linkedscene="scene_p022" tooltip="Stable yard" />
+		<hotspot name="go_p024" style="skin_hotspotstyle" ath="175.28" atv="7.89" linkedscene="scene_p024" tooltip="Lane by the paddock" />
+	</scene>
+	<scene name="scene_p026" title="Stable block" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p026.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p026.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p026.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p023" style="skin_hotspotstyle" ath="7.07" atv="4.74" linkedscene="scene_p023" tooltip="Old stables" />
+		<hotspot name="go_p022" style="skin_hotspotstyle" ath="159.56" atv="3.16" linkedscene="scene_p022" tooltip="Stable yard" />
+	</scene>
+	<scene name="scene_p027" title="Inside the stables" onstart="if(layer[floors], layer[floors].selectitembyname(g0));" thumburl="panos/p027.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p027.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p027.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p023" style="skin_hotspotstyle" ath="-142.27" atv="3.16" linkedscene="scene_p023" tooltip="Old stables" />
+	</scene>
+	<scene name="scene_p038" title="Front porch" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p038.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p038.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p038.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p004" style="skin_hotspotstyle" ath="-157.99" atv="9.47" linkedscene="scene_p004" tooltip="Courtyard and drive (Apr 2020)" />
+		<hotspot name="go_p039" style="skin_hotspotstyle" ath="95.11" atv="6.32" linkedscene="scene_p039" tooltip="Boot room" />
+		<hotspot name="go_p041" style="skin_hotspotstyle" ath="22.79" atv="7.89" linkedscene="scene_p041" tooltip="Entrance hall" />
+		<hotspot name="go_p081" style="skin_hotspotstyle" ath="58.95" atv="7.89" linkedscene="scene_p081" tooltip="Small room" />
+	</scene>
+	<scene name="scene_p039" title="Boot room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p039.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p039.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p039.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p038" style="skin_hotspotstyle" ath="132.84" atv="6.32" linkedscene="scene_p038" tooltip="Front porch" />
+		<hotspot name="go_p040" style="skin_hotspotstyle" ath="-60.52" atv="15.79" linkedscene="scene_p040" tooltip="Inner porch" />
+	</scene>
+	<scene name="scene_p040" title="Inner porch" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p040.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p040.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p040.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p039" style="skin_hotspotstyle" ath="47.95" atv="17.37" linkedscene="scene_p039" tooltip="Boot room" />
+	</scene>
+	<scene name="scene_p041" title="Entrance hall" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p041.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p041.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p041.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p038" style="skin_hotspotstyle" ath="7.07" atv="7.89" linkedscene="scene_p038" tooltip="Front porch" />
+		<hotspot name="go_p042" style="skin_hotspotstyle" ath="62.1" atv="4.74" linkedscene="scene_p042" tooltip="Hall doorway" />
+		<hotspot name="go_p046" style="skin_hotspotstyle" ath="-180.0" atv="4.26" linkedscene="scene_p046" tooltip="Great hall" />
+		<hotspot name="go_p102" style="skin_hotspotstyle" ath="-144.31" atv="6.14" linkedscene="scene_p102" tooltip="Great hall from the stairs" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="-134.11" atv="-41.93" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="-7.65" atv="-76.7" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p114" style="skin_hotspotstyle" ath="55.58" atv="-67.5" linkedscene="scene_p114" tooltip="Gallery" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="-165.72" atv="-14.32" linkedscene="scene_p100" tooltip="Main stairs" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="163.68" atv="-43.98" linkedscene="scene_p110" tooltip="Gallery" />
+	</scene>
+	<scene name="scene_p042" title="Hall doorway" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p042.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p042.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p042.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p041" style="skin_hotspotstyle" ath="88.82" atv="3.16" linkedscene="scene_p041" tooltip="Entrance hall" />
+		<hotspot name="go_p043" style="skin_hotspotstyle" ath="-172.14" atv="9.47" linkedscene="scene_p043" tooltip="Library" />
+		<hotspot name="go_p044" style="skin_hotspotstyle" ath="11.79" atv="12.63" linkedscene="scene_p044" tooltip="Library" />
+	</scene>
+	<scene name="scene_p043" title="Library" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p043.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p043.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p043.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p042" style="skin_hotspotstyle" ath="40.38" atv="7.56" linkedscene="scene_p042" tooltip="Hall doorway" />
+	</scene>
+	<scene name="scene_p044" title="Library" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p044.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p044.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p044.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p042" style="skin_hotspotstyle" ath="60.52" atv="12.63" linkedscene="scene_p042" tooltip="Hall doorway" />
+		<hotspot name="go_p045" style="skin_hotspotstyle" ath="-79.39" atv="11.05" linkedscene="scene_p045" tooltip="Library, far end" />
+	</scene>
+	<scene name="scene_p045" title="Library, far end" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p045.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p045.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p045.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p044" style="skin_hotspotstyle" ath="44.8" atv="1.58" linkedscene="scene_p044" tooltip="Library" />
+	</scene>
+	<scene name="scene_p046" title="Great hall" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p046.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p046.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p046.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p041" style="skin_hotspotstyle" ath="-27.53" atv="7.8" linkedscene="scene_p041" tooltip="Entrance hall" />
+		<hotspot name="go_p050" style="skin_hotspotstyle" ath="147.56" atv="2.66" linkedscene="scene_p050" tooltip="Great hall and stairs" />
+		<hotspot name="go_p102" style="skin_hotspotstyle" ath="-146.35" atv="9.2" linkedscene="scene_p102" tooltip="Great hall from the stairs" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="-116.77" atv="-51.14" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="-39.26" atv="-36.82" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="79.04" atv="-74.66" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="171.84" atv="-14.32" linkedscene="scene_p100" tooltip="Main stairs" />
+	</scene>
+	<scene name="scene_p047" title="Dining room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p047.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p047.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p047.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p050" style="skin_hotspotstyle" ath="92.47" atv="4.96" linkedscene="scene_p050" tooltip="Great hall and stairs" />
+		<hotspot name="go_p048" style="skin_hotspotstyle" ath="-95.29" atv="13.46" linkedscene="scene_p048" tooltip="Dining room, garden door" />
+		<hotspot name="go_p049" style="skin_hotspotstyle" ath="-3.53" atv="4.96" linkedscene="scene_p049" tooltip="Dining room" />
+		<hotspot name="go_p054" style="skin_hotspotstyle" ath="-19.06" atv="4.96" linkedscene="scene_p054" tooltip="China pantry" />
+	</scene>
+	<scene name="scene_p048" title="Dining room, garden door" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p048.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p048.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p048.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p009" style="skin_hotspotstyle" ath="-36.0" atv="17.72" linkedscene="scene_p009" tooltip="Garden terrace (Dec 2023)" />
+		<hotspot name="go_p002" style="skin_hotspotstyle" ath="-38.82" atv="-41.81" linkedscene="scene_p002" tooltip="Aerial view over the estate" />
+		<hotspot name="go_p047" style="skin_hotspotstyle" ath="146.12" atv="6.38" linkedscene="scene_p047" tooltip="Dining room" />
+	</scene>
+	<scene name="scene_p049" title="Dining room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p049.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p049.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p049.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p047" style="skin_hotspotstyle" ath="68.47" atv="10.63" linkedscene="scene_p047" tooltip="Dining room" />
+		<hotspot name="go_p050" style="skin_hotspotstyle" ath="33.18" atv="4.96" linkedscene="scene_p050" tooltip="Great hall and stairs" />
+		<hotspot name="go_p054" style="skin_hotspotstyle" ath="-148.94" atv="10.63" linkedscene="scene_p054" tooltip="China pantry" />
+	</scene>
+	<scene name="scene_p050" title="Great hall and stairs" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p050.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p050.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p050.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p046" style="skin_hotspotstyle" ath="-13.41" atv="6.38" linkedscene="scene_p046" tooltip="Great hall" />
+		<hotspot name="go_p047" style="skin_hotspotstyle" ath="147.53" atv="6.38" linkedscene="scene_p047" tooltip="Dining room" />
+		<hotspot name="go_p051" style="skin_hotspotstyle" ath="116.47" atv="7.8" linkedscene="scene_p051" tooltip="Lounge" />
+		<hotspot name="go_p080" style="skin_hotspotstyle" ath="-149.16" atv="5.86" linkedscene="scene_p080" tooltip="Hallway" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="-45.38" atv="-27.61" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p102" style="skin_hotspotstyle" ath="-40.28" atv="14.32" linkedscene="scene_p102" tooltip="Great hall from the stairs" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="-18.87" atv="-21.48" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="37.22" atv="-69.55" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="-158.58" atv="-54.2" linkedscene="scene_p100" tooltip="Main stairs" />
+	</scene>
+	<scene name="scene_p051" title="Lounge" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p051.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p051.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p051.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p050" style="skin_hotspotstyle" ath="-68.47" atv="7.8" linkedscene="scene_p050" tooltip="Great hall and stairs" />
+	</scene>
+	<scene name="scene_p052" title="Service corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p052.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p052.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p052.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p055" style="skin_hotspotstyle" ath="84.29" atv="4.38" linkedscene="scene_p055" tooltip="Back corridor" />
+		<hotspot name="go_p053" style="skin_hotspotstyle" ath="-10.93" atv="7.3" linkedscene="scene_p053" tooltip="Service doorway" />
+	</scene>
+	<scene name="scene_p053" title="Service doorway" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p053.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p053.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p053.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p080" style="skin_hotspotstyle" ath="-32.17" atv="6.39" linkedscene="scene_p080" tooltip="Hallway" />
+		<hotspot name="go_p029" style="skin_hotspotstyle" ath="-158.82" atv="7.8" linkedscene="scene_p029" tooltip="Back stairs" />
+		<hotspot name="go_p056" style="skin_hotspotstyle" ath="-120.73" atv="10.22" linkedscene="scene_p056" tooltip="Back corridor" />
+		<hotspot name="go_p052" style="skin_hotspotstyle" ath="150.35" atv="4.96" linkedscene="scene_p052" tooltip="Service corridor" />
+	</scene>
+	<scene name="scene_p054" title="China pantry" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p054.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p054.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p054.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p049" style="skin_hotspotstyle" ath="119.29" atv="10.63" linkedscene="scene_p049" tooltip="Dining room" />
+		<hotspot name="go_p055" style="skin_hotspotstyle" ath="-89.65" atv="16.3" linkedscene="scene_p055" tooltip="Back corridor" />
+	</scene>
+	<scene name="scene_p055" title="Back corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p055.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p055.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p055.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p054" style="skin_hotspotstyle" ath="99.53" atv="4.96" linkedscene="scene_p054" tooltip="China pantry" />
+		<hotspot name="go_p052" style="skin_hotspotstyle" ath="-5.1" atv="9.24" linkedscene="scene_p052" tooltip="Service corridor" />
+		<hotspot name="go_p061" style="skin_hotspotstyle" ath="-117.33" atv="7.3" linkedscene="scene_p061" tooltip="Back corridor" />
+	</scene>
+	<scene name="scene_p056" title="Back corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p056.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p056.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p056.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p053" style="skin_hotspotstyle" ath="146.48" atv="5.35" linkedscene="scene_p053" tooltip="Service doorway" />
+		<hotspot name="go_p057" style="skin_hotspotstyle" ath="-77.0" atv="13.62" linkedscene="scene_p057" tooltip="Workroom" />
+		<hotspot name="go_p058" style="skin_hotspotstyle" ath="-33.28" atv="5.84" linkedscene="scene_p058" tooltip="Store room" />
+		<hotspot name="go_p029" style="skin_hotspotstyle" ath="173.54" atv="-1.29" linkedscene="scene_p029" tooltip="Back stairs" />
+	</scene>
+	<scene name="scene_p057" title="Workroom" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p057.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p057.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p057.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p056" style="skin_hotspotstyle" ath="154.74" atv="7.78" linkedscene="scene_p056" tooltip="Back corridor" />
+	</scene>
+	<scene name="scene_p058" title="Store room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p058.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p058.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p058.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p056" style="skin_hotspotstyle" ath="-148.91" atv="7.3" linkedscene="scene_p056" tooltip="Back corridor" />
+		<hotspot name="go_p059" style="skin_hotspotstyle" ath="-48.34" atv="13.14" linkedscene="scene_p059" tooltip="Store room" />
+		<hotspot name="go_p060" style="skin_hotspotstyle" ath="35.71" atv="4.86" linkedscene="scene_p060" tooltip="Cellar store" />
+	</scene>
+	<scene name="scene_p059" title="Store room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p059.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p059.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p059.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p058" style="skin_hotspotstyle" ath="172.71" atv="7.78" linkedscene="scene_p058" tooltip="Store room" />
+	</scene>
+	<scene name="scene_p060" title="Cellar store" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p060.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p060.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p060.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p058" style="skin_hotspotstyle" ath="-90.61" atv="9.73" linkedscene="scene_p058" tooltip="Store room" />
+	</scene>
+	<scene name="scene_p061" title="Back corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p061.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p061.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p061.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p055" style="skin_hotspotstyle" ath="162.02" atv="6.81" linkedscene="scene_p055" tooltip="Back corridor" />
+		<hotspot name="go_p062" style="skin_hotspotstyle" ath="-11.96" atv="5.86" linkedscene="scene_p062" tooltip="Back corridor" />
+		<hotspot name="go_p074" style="skin_hotspotstyle" ath="78.53" atv="6.47" linkedscene="scene_p074" tooltip="Kitchen" />
+	</scene>
+	<scene name="scene_p062" title="Back corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p062.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p062.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p062.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p061" style="skin_hotspotstyle" ath="77.9" atv="4.26" linkedscene="scene_p061" tooltip="Back corridor" />
+		<hotspot name="go_p079" style="skin_hotspotstyle" ath="-92.79" atv="7.99" linkedscene="scene_p079" tooltip="Service corridor" />
+		<hotspot name="go_p063" style="skin_hotspotstyle" ath="173.62" atv="4.26" linkedscene="scene_p063" tooltip="Fire exit corridor" />
+	</scene>
+	<scene name="scene_p063" title="Fire exit corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p063.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p063.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p063.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p062" style="skin_hotspotstyle" ath="-7.18" atv="16.51" linkedscene="scene_p062" tooltip="Back corridor" />
+		<hotspot name="go_p064" style="skin_hotspotstyle" ath="-99.7" atv="13.31" linkedscene="scene_p064" tooltip="Utility store" />
+		<hotspot name="go_p065" style="skin_hotspotstyle" ath="174.68" atv="4.26" linkedscene="scene_p065" tooltip="Red door corridor" />
+	</scene>
+	<scene name="scene_p064" title="Utility store" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p064.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p064.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p064.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p063" style="skin_hotspotstyle" ath="63.01" atv="13.85" linkedscene="scene_p063" tooltip="Fire exit corridor" />
+	</scene>
+	<scene name="scene_p065" title="Red door corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p065.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p065.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p065.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p063" style="skin_hotspotstyle" ath="26.32" atv="9.59" linkedscene="scene_p063" tooltip="Fire exit corridor" />
+		<hotspot name="go_p066" style="skin_hotspotstyle" ath="135.33" atv="10.12" linkedscene="scene_p066" tooltip="Old kitchen" />
+		<hotspot name="go_p067" style="skin_hotspotstyle" ath="-88.54" atv="19.7" linkedscene="scene_p067" tooltip="Scullery" />
+		<hotspot name="go_p068" style="skin_hotspotstyle" ath="-151.82" atv="7.46" linkedscene="scene_p068" tooltip="Red door corridor" />
+	</scene>
+	<scene name="scene_p066" title="Old kitchen" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p066.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p066.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p066.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p065" style="skin_hotspotstyle" ath="90.13" atv="13.85" linkedscene="scene_p065" tooltip="Red door corridor" />
+	</scene>
+	<scene name="scene_p067" title="Scullery" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p067.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p067.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p067.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p065" style="skin_hotspotstyle" ath="4.52" atv="12.78" linkedscene="scene_p065" tooltip="Red door corridor" />
+	</scene>
+	<scene name="scene_p068" title="Red door corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p068.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p068.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p068.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p065" style="skin_hotspotstyle" ath="-0.8" atv="7.46" linkedscene="scene_p065" tooltip="Red door corridor" />
+		<hotspot name="go_p069" style="skin_hotspotstyle" ath="140.12" atv="10.65" linkedscene="scene_p069" tooltip="Utility room" />
+		<hotspot name="go_p070" style="skin_hotspotstyle" ath="-161.39" atv="11.18" linkedscene="scene_p070" tooltip="Utility doorway" />
+		<hotspot name="go_p071" style="skin_hotspotstyle" ath="-180.0" atv="7.99" linkedscene="scene_p071" tooltip="Service corridor" />
+	</scene>
+	<scene name="scene_p069" title="Utility room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p069.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p069.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p069.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p068" style="skin_hotspotstyle" ath="-16.22" atv="7.99" linkedscene="scene_p068" tooltip="Red door corridor" />
+	</scene>
+	<scene name="scene_p070" title="Utility doorway" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p070.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p070.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p070.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p068" style="skin_hotspotstyle" ath="32.7" atv="14.38" linkedscene="scene_p068" tooltip="Red door corridor" />
+	</scene>
+	<scene name="scene_p071" title="Service corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p071.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p071.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p071.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p068" style="skin_hotspotstyle" ath="6.12" atv="7.99" linkedscene="scene_p068" tooltip="Red door corridor" />
+		<hotspot name="go_p072" style="skin_hotspotstyle" ath="-99.17" atv="14.38" linkedscene="scene_p072" tooltip="Workshop" />
+		<hotspot name="go_p073" style="skin_hotspotstyle" ath="93.32" atv="12.25" linkedscene="scene_p073" tooltip="Arched passage" />
+	</scene>
+	<scene name="scene_p072" title="Workshop" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p072.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p072.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p072.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p071" style="skin_hotspotstyle" ath="-15.69" atv="15.98" linkedscene="scene_p071" tooltip="Service corridor" />
+	</scene>
+	<scene name="scene_p073" title="Arched passage" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p073.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p073.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p073.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p071" style="skin_hotspotstyle" ath="32.17" atv="14.91" linkedscene="scene_p071" tooltip="Service corridor" />
+	</scene>
+	<scene name="scene_p074" title="Kitchen" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p074.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p074.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p074.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p075" style="skin_hotspotstyle" ath="145.97" atv="9.05" linkedscene="scene_p075" tooltip="Kitchen archway" />
+		<hotspot name="go_p078" style="skin_hotspotstyle" ath="-137.99" atv="5.83" linkedscene="scene_p078" tooltip="Back hall" />
+		<hotspot name="go_p061" style="skin_hotspotstyle" ath="57.2" atv="11.01" linkedscene="scene_p061" tooltip="Back corridor" />
+	</scene>
+	<scene name="scene_p075" title="Kitchen archway" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p075.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p075.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p075.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p074" style="skin_hotspotstyle" ath="-3.46" atv="12.78" linkedscene="scene_p074" tooltip="Kitchen" />
+		<hotspot name="go_p076" style="skin_hotspotstyle" ath="-164.05" atv="9.05" linkedscene="scene_p076" tooltip="Kitchen, pantry door" />
+	</scene>
+	<scene name="scene_p076" title="Kitchen, pantry door" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p076.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p076.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p076.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p079" style="skin_hotspotstyle" ath="-14.62" atv="17.57" linkedscene="scene_p079" tooltip="Service corridor" />
+		<hotspot name="go_p077" style="skin_hotspotstyle" ath="162.98" atv="4.26" linkedscene="scene_p077" tooltip="Kitchen" />
+		<hotspot name="go_p075" style="skin_hotspotstyle" ath="-103.43" atv="8.52" linkedscene="scene_p075" tooltip="Kitchen archway" />
+	</scene>
+	<scene name="scene_p077" title="Kitchen" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p077.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p077.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p077.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p076" style="skin_hotspotstyle" ath="-57.16" atv="6.39" linkedscene="scene_p076" tooltip="Kitchen, pantry door" />
+		<hotspot name="go_p078" style="skin_hotspotstyle" ath="-166.17" atv="4.26" linkedscene="scene_p078" tooltip="Back hall" />
+		<hotspot name="go_p075" style="skin_hotspotstyle" ath="-89.6" atv="6.39" linkedscene="scene_p075" tooltip="Kitchen archway" />
+	</scene>
+	<scene name="scene_p078" title="Back hall" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p078.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p078.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p078.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p077" style="skin_hotspotstyle" ath="-25.26" atv="6.92" linkedscene="scene_p077" tooltip="Kitchen" />
+		<hotspot name="go_p061" style="skin_hotspotstyle" ath="-143.31" atv="2.66" linkedscene="scene_p061" tooltip="Back corridor" />
+		<hotspot name="go_p074" style="skin_hotspotstyle" ath="-156.07" atv="5.33" linkedscene="scene_p074" tooltip="Kitchen" />
+	</scene>
+	<scene name="scene_p079" title="Service corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p079.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p079.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p079.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p062" style="skin_hotspotstyle" ath="-0.8" atv="9.05" linkedscene="scene_p062" tooltip="Back corridor" />
+		<hotspot name="go_p077" style="skin_hotspotstyle" ath="-86.41" atv="5.86" linkedscene="scene_p077" tooltip="Kitchen" />
+	</scene>
+	<scene name="scene_p080" title="Hallway" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p080.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p080.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p080.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p046" style="skin_hotspotstyle" ath="95.98" atv="3.2" linkedscene="scene_p046" tooltip="Great hall" />
+		<hotspot name="go_p050" style="skin_hotspotstyle" ath="149.69" atv="5.86" linkedscene="scene_p050" tooltip="Great hall and stairs" />
+		<hotspot name="go_p053" style="skin_hotspotstyle" ath="-15.15" atv="7.46" linkedscene="scene_p053" tooltip="Service doorway" />
+	</scene>
+	<scene name="scene_p081" title="Small room" onstart="if(layer[floors], layer[floors].selectitembyname(g1));" thumburl="panos/p081.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p081.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p081.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p038" style="skin_hotspotstyle" ath="165.11" atv="6.92" linkedscene="scene_p038" tooltip="Front porch" />
+	</scene>
+	<scene name="scene_p082" title="Room under works" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p082.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p082.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p082.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p031" style="skin_hotspotstyle" ath="121.37" atv="1.84" linkedscene="scene_p031" tooltip="Stair landing" />
+		<hotspot name="go_p083" style="skin_hotspotstyle" ath="-110.38" atv="5.51" linkedscene="scene_p083" tooltip="Bedroom under works" />
+	</scene>
+	<scene name="scene_p083" title="Bedroom under works" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p083.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p083.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p083.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p082" style="skin_hotspotstyle" ath="147.02" atv="5.51" linkedscene="scene_p082" tooltip="Room under works" />
+		<hotspot name="go_p084" style="skin_hotspotstyle" ath="-0.46" atv="8.27" linkedscene="scene_p084" tooltip="Room under works" />
+	</scene>
+	<scene name="scene_p084" title="Room under works" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p084.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p084.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p084.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p083" style="skin_hotspotstyle" ath="170.84" atv="6.43" linkedscene="scene_p083" tooltip="Bedroom under works" />
+	</scene>
+	<scene name="scene_p085" title="Landing corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p085.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p085.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p085.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p086" style="skin_hotspotstyle" ath="-2.29" atv="9.18" linkedscene="scene_p086" tooltip="Corridor" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="172.67" atv="1.84" linkedscene="scene_p100" tooltip="Main stairs" />
+		<hotspot name="go_p031" style="skin_hotspotstyle" ath="89.31" atv="6.43" linkedscene="scene_p031" tooltip="Stair landing" />
+	</scene>
+	<scene name="scene_p086" title="Corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p086.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p086.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p086.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p087" style="skin_hotspotstyle" ath="-77.4" atv="11.94" linkedscene="scene_p087" tooltip="Corridor" />
+		<hotspot name="go_p085" style="skin_hotspotstyle" ath="105.8" atv="4.59" linkedscene="scene_p085" tooltip="Landing corridor" />
+	</scene>
+	<scene name="scene_p087" title="Corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p087.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p087.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p087.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p088" style="skin_hotspotstyle" ath="-25.19" atv="7.35" linkedscene="scene_p088" tooltip="Back landing" />
+		<hotspot name="go_p089" style="skin_hotspotstyle" ath="-51.76" atv="-1.84" linkedscene="scene_p089" tooltip="Dressing room" />
+		<hotspot name="go_p094" style="skin_hotspotstyle" ath="39.85" atv="3.67" linkedscene="scene_p094" tooltip="Room under renovation" />
+		<hotspot name="go_p086" style="skin_hotspotstyle" ath="-115.88" atv="6.43" linkedscene="scene_p086" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p088" title="Back landing" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p088.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p088.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p088.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p089" style="skin_hotspotstyle" ath="-25.19" atv="-6.43" linkedscene="scene_p089" tooltip="Dressing room" />
+		<hotspot name="go_p092" style="skin_hotspotstyle" ath="67.33" atv="5.51" linkedscene="scene_p092" tooltip="Corridor window" />
+		<hotspot name="go_p087" style="skin_hotspotstyle" ath="-110.38" atv="11.94" linkedscene="scene_p087" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p089" title="Dressing room" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p089.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p089.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p089.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p090" style="skin_hotspotstyle" ath="167.18" atv="7.35" linkedscene="scene_p090" tooltip="Bathroom" />
+		<hotspot name="go_p091" style="skin_hotspotstyle" ath="67.33" atv="15.61" linkedscene="scene_p091" tooltip="Bedroom" />
+		<hotspot name="go_p088" style="skin_hotspotstyle" ath="-99.39" atv="24.8" linkedscene="scene_p088" tooltip="Back landing" />
+	</scene>
+	<scene name="scene_p090" title="Bathroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p090.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p090.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p090.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p089" style="skin_hotspotstyle" ath="-133.28" atv="7.35" linkedscene="scene_p089" tooltip="Dressing room" />
+	</scene>
+	<scene name="scene_p091" title="Bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p091.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p091.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p091.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p089" style="skin_hotspotstyle" ath="-174.5" atv="8.27" linkedscene="scene_p089" tooltip="Dressing room" />
+	</scene>
+	<scene name="scene_p092" title="Corridor window" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p092.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p092.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p092.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p093" style="skin_hotspotstyle" ath="45.34" atv="4.59" linkedscene="scene_p093" tooltip="Doorway to the works" />
+		<hotspot name="go_p088" style="skin_hotspotstyle" ath="168.09" atv="4.59" linkedscene="scene_p088" tooltip="Back landing" />
+	</scene>
+	<scene name="scene_p093" title="Doorway to the works" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p093.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p093.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p093.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p094" style="skin_hotspotstyle" ath="-6.87" atv="7.35" linkedscene="scene_p094" tooltip="Room under renovation" />
+		<hotspot name="go_p092" style="skin_hotspotstyle" ath="71.91" atv="9.18" linkedscene="scene_p092" tooltip="Corridor window" />
+		<hotspot name="go_p096" style="skin_hotspotstyle" ath="-96.64" atv="7.35" linkedscene="scene_p096" tooltip="Corridor" />
+		<hotspot name="go_p095" style="skin_hotspotstyle" ath="-122.29" atv="5.51" linkedscene="scene_p095" tooltip="Upstairs sitting room" />
+	</scene>
+	<scene name="scene_p094" title="Room under renovation" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p094.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p094.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p094.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p093" style="skin_hotspotstyle" ath="175.42" atv="3.67" linkedscene="scene_p093" tooltip="Doorway to the works" />
+		<hotspot name="go_p087" style="skin_hotspotstyle" ath="31.6" atv="0.92" linkedscene="scene_p087" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p095" title="Upstairs sitting room" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p095.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p095.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p095.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p096" style="skin_hotspotstyle" ath="-78.32" atv="6.43" linkedscene="scene_p096" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p096" title="Corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p096.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p096.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p096.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p097" style="skin_hotspotstyle" ath="-48.09" atv="5.51" linkedscene="scene_p097" tooltip="Landing doors" />
+		<hotspot name="go_p095" style="skin_hotspotstyle" ath="-153.44" atv="2.76" linkedscene="scene_p095" tooltip="Upstairs sitting room" />
+		<hotspot name="go_p093" style="skin_hotspotstyle" ath="107.63" atv="3.67" linkedscene="scene_p093" tooltip="Doorway to the works" />
+	</scene>
+	<scene name="scene_p097" title="Landing doors" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p097.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p097.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p097.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p098" style="skin_hotspotstyle" ath="-50.84" atv="8.27" linkedscene="scene_p098" tooltip="Shower room" />
+		<hotspot name="go_p099" style="skin_hotspotstyle" ath="16.03" atv="7.35" linkedscene="scene_p099" tooltip="Landing" />
+		<hotspot name="go_p096" style="skin_hotspotstyle" ath="166.26" atv="11.02" linkedscene="scene_p096" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p098" title="Shower room" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p098.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p098.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p098.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p097" style="skin_hotspotstyle" ath="30.69" atv="10.1" linkedscene="scene_p097" tooltip="Landing doors" />
+	</scene>
+	<scene name="scene_p099" title="Landing" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p099.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p099.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p099.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p097" style="skin_hotspotstyle" ath="28.86" atv="8.27" linkedscene="scene_p097" tooltip="Landing doors" />
+	</scene>
+	<scene name="scene_p100" title="Main stairs" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p100.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p100.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p100.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="-64.58" atv="-6.43" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="-156.18" atv="-4.59" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="-123.21" atv="-2.76" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p085" style="skin_hotspotstyle" ath="102.14" atv="4.59" linkedscene="scene_p085" tooltip="Landing corridor" />
+	</scene>
+	<scene name="scene_p101" title="Gallery landing" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p101.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p101.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p101.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="26.11" atv="-16.53" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="71.91" atv="-7.35" linkedscene="scene_p100" tooltip="Main stairs" />
+		<hotspot name="go_p102" style="skin_hotspotstyle" ath="-110.38" atv="29.39" linkedscene="scene_p102" tooltip="Great hall from the stairs" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="-58.17" atv="-17.45" linkedscene="scene_p110" tooltip="Gallery" />
+	</scene>
+	<scene name="scene_p102" title="Great hall from the stairs" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p102.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p102.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p102.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="105.8" atv="-25.71" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p101" style="skin_hotspotstyle" ath="135.11" atv="6.43" linkedscene="scene_p101" tooltip="Gallery landing" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="129.62" atv="-18.37" linkedscene="scene_p100" tooltip="Main stairs" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="37.1" atv="-39.49" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="-31.6" atv="-31.22" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p041" style="skin_hotspotstyle" ath="-16.95" atv="8.27" linkedscene="scene_p041" tooltip="Entrance hall" />
+		<hotspot name="go_p046" style="skin_hotspotstyle" ath="50.84" atv="10.1" linkedscene="scene_p046" tooltip="Great hall" />
+	</scene>
+	<scene name="scene_p103" title="Gallery" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p103.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p103.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p103.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p085" style="skin_hotspotstyle" ath="-16.03" atv="12.86" linkedscene="scene_p085" tooltip="Landing corridor" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="80.15" atv="2.76" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="51.76" atv="0.92" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p104" style="skin_hotspotstyle" ath="176.34" atv="12.86" linkedscene="scene_p104" tooltip="WC" />
+		<hotspot name="go_p105" style="skin_hotspotstyle" ath="-106.72" atv="3.67" linkedscene="scene_p105" tooltip="Sitting room" />
+	</scene>
+	<scene name="scene_p104" title="WC" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p104.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p104.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p104.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="-101.22" atv="12.86" linkedscene="scene_p103" tooltip="Gallery" />
+	</scene>
+	<scene name="scene_p105" title="Sitting room" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p105.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p105.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p105.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="-60.0" atv="9.18" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p106" style="skin_hotspotstyle" ath="-0.46" atv="6.43" linkedscene="scene_p106" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p106" title="Corridor" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p106.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p106.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p106.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p105" style="skin_hotspotstyle" ath="-101.22" atv="5.51" linkedscene="scene_p105" tooltip="Sitting room" />
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="-64.58" atv="8.27" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p107" style="skin_hotspotstyle" ath="-174.5" atv="6.43" linkedscene="scene_p107" tooltip="Four-poster bedroom" />
+		<hotspot name="go_p109" style="skin_hotspotstyle" ath="100.31" atv="8.27" linkedscene="scene_p109" tooltip="Bathroom" />
+	</scene>
+	<scene name="scene_p107" title="Four-poster bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p107.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p107.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p107.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p106" style="skin_hotspotstyle" ath="-16.95" atv="5.51" linkedscene="scene_p106" tooltip="Corridor" />
+		<hotspot name="go_p108" style="skin_hotspotstyle" ath="95.73" atv="5.51" linkedscene="scene_p108" tooltip="Four-poster bedroom" />
+	</scene>
+	<scene name="scene_p108" title="Four-poster bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p108.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p108.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p108.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p107" style="skin_hotspotstyle" ath="20.61" atv="4.59" linkedscene="scene_p107" tooltip="Four-poster bedroom" />
+	</scene>
+	<scene name="scene_p109" title="Bathroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p109.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p109.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p109.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p106" style="skin_hotspotstyle" ath="63.66" atv="5.51" linkedscene="scene_p106" tooltip="Corridor" />
+	</scene>
+	<scene name="scene_p110" title="Gallery" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p110.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p110.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p110.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="-4.12" atv="5.51" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="113.13" atv="5.51" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p100" style="skin_hotspotstyle" ath="30.69" atv="11.94" linkedscene="scene_p100" tooltip="Main stairs" />
+		<hotspot name="go_p114" style="skin_hotspotstyle" ath="174.5" atv="3.67" linkedscene="scene_p114" tooltip="Gallery" />
+		<hotspot name="go_p111" style="skin_hotspotstyle" ath="-106.72" atv="13.78" linkedscene="scene_p111" tooltip="Bedroom" />
+	</scene>
+	<scene name="scene_p111" title="Bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p111.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p111.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p111.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="-77.4" atv="11.02" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p112" style="skin_hotspotstyle" ath="-178.17" atv="6.43" linkedscene="scene_p112" tooltip="Bedroom and wardrobe" />
+		<hotspot name="go_p113" style="skin_hotspotstyle" ath="125.92" atv="6.84" linkedscene="scene_p113" tooltip="En-suite" />
+	</scene>
+	<scene name="scene_p112" title="Bedroom and wardrobe" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p112.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p112.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p112.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p111" style="skin_hotspotstyle" ath="-72.82" atv="5.51" linkedscene="scene_p111" tooltip="Bedroom" />
+	</scene>
+	<scene name="scene_p113" title="En-suite" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p113.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p113.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p113.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p111" style="skin_hotspotstyle" ath="-74.57" atv="10.67" linkedscene="scene_p111" tooltip="Bedroom" />
+	</scene>
+	<scene name="scene_p114" title="Gallery" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p114.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p114.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p114.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="25.19" atv="4.59" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="52.67" atv="6.43" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="-38.02" atv="3.67" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p115" style="skin_hotspotstyle" ath="-131.45" atv="6.43" linkedscene="scene_p115" tooltip="Gallery doors" />
+	</scene>
+	<scene name="scene_p115" title="Gallery doors" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p115.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p115.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p115.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p114" style="skin_hotspotstyle" ath="-126.87" atv="5.51" linkedscene="scene_p114" tooltip="Gallery" />
+		<hotspot name="go_p118" style="skin_hotspotstyle" ath="-18.78" atv="11.94" linkedscene="scene_p118" tooltip="Upstairs room" />
+		<hotspot name="go_p116" style="skin_hotspotstyle" ath="171.76" atv="17.45" linkedscene="scene_p116" tooltip="Twin bedroom" />
+		<hotspot name="go_p117" style="skin_hotspotstyle" ath="60.0" atv="12.86" linkedscene="scene_p117" tooltip="Bathroom" />
+	</scene>
+	<scene name="scene_p116" title="Twin bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p116.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p116.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p116.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p115" style="skin_hotspotstyle" ath="-27.94" atv="9.18" linkedscene="scene_p115" tooltip="Gallery doors" />
+	</scene>
+	<scene name="scene_p117" title="Bathroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p117.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p117.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p117.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p115" style="skin_hotspotstyle" ath="-175.42" atv="5.51" linkedscene="scene_p115" tooltip="Gallery doors" />
+	</scene>
+	<scene name="scene_p118" title="Upstairs room" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p118.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p118.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p118.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p119" style="skin_hotspotstyle" ath="-85.65" atv="14.69" linkedscene="scene_p119" tooltip="Bedroom" />
+		<hotspot name="go_p115" style="skin_hotspotstyle" ath="160.76" atv="3.67" linkedscene="scene_p115" tooltip="Gallery doors" />
+	</scene>
+	<scene name="scene_p119" title="Bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p119.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p119.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p119.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p120" style="skin_hotspotstyle" ath="-24.27" atv="11.94" linkedscene="scene_p120" tooltip="Bedroom" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="-59.08" atv="9.18" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p118" style="skin_hotspotstyle" ath="-169.01" atv="13.78" linkedscene="scene_p118" tooltip="Upstairs room" />
+	</scene>
+	<scene name="scene_p120" title="Bedroom" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p120.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p120.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p120.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="159.85" atv="10.1" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+		<hotspot name="go_p119" style="skin_hotspotstyle" ath="28.86" atv="9.18" linkedscene="scene_p119" tooltip="Bedroom" />
+	</scene>
+	<scene name="scene_p121" title="Gallery chandelier" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p121.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p121.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p121.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p046" style="skin_hotspotstyle" ath="-16.03" atv="36.73" linkedscene="scene_p046" tooltip="Great hall" />
+		<hotspot name="go_p122" style="skin_hotspotstyle" ath="56.34" atv="9.18" linkedscene="scene_p122" tooltip="Gallery" />
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="-39.85" atv="8.27" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p114" style="skin_hotspotstyle" ath="-79.24" atv="6.43" linkedscene="scene_p114" tooltip="Gallery" />
+		<hotspot name="go_p115" style="skin_hotspotstyle" ath="-97.56" atv="4.59" linkedscene="scene_p115" tooltip="Gallery doors" />
+		<hotspot name="go_p120" style="skin_hotspotstyle" ath="169.92" atv="8.27" linkedscene="scene_p120" tooltip="Bedroom" />
+	</scene>
+	<scene name="scene_p122" title="Gallery" onstart="if(layer[floors], layer[floors].selectitembyname(g2));" thumburl="panos/p122.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p122.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p122.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p110" style="skin_hotspotstyle" ath="-94.81" atv="5.51" linkedscene="scene_p110" tooltip="Gallery" />
+		<hotspot name="go_p103" style="skin_hotspotstyle" ath="-50.84" atv="3.67" linkedscene="scene_p103" tooltip="Gallery" />
+		<hotspot name="go_p114" style="skin_hotspotstyle" ath="-153.44" atv="5.51" linkedscene="scene_p114" tooltip="Gallery" />
+		<hotspot name="go_p121" style="skin_hotspotstyle" ath="176.34" atv="4.59" linkedscene="scene_p121" tooltip="Gallery chandelier" />
+	</scene>
+	<scene name="scene_p028" title="Back stairs (Jan 2021)" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p028.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p028.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p028.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p031" style="skin_hotspotstyle" ath="178.73" atv="35.11" linkedscene="scene_p031" tooltip="Stair landing" />
+		<hotspot name="go_p033" style="skin_hotspotstyle" ath="153.24" atv="-20.43" linkedscene="scene_p033" tooltip="Attic corridor (Jan 2021)" />
+	</scene>
+	<scene name="scene_p029" title="Back stairs" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p029.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p029.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p029.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p030" style="skin_hotspotstyle" ath="2.23" atv="-21.7" linkedscene="scene_p030" tooltip="Stair window" />
+		<hotspot name="go_p080" style="skin_hotspotstyle" ath="-135.4" atv="12.13" linkedscene="scene_p080" tooltip="Hallway" />
+		<hotspot name="go_p056" style="skin_hotspotstyle" ath="90.8" atv="10.21" linkedscene="scene_p056" tooltip="Back corridor" />
+	</scene>
+	<scene name="scene_p030" title="Stair window" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p030.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p030.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p030.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p031" style="skin_hotspotstyle" ath="157.99" atv="-1.58" linkedscene="scene_p031" tooltip="Stair landing" />
+		<hotspot name="go_p029" style="skin_hotspotstyle" ath="-176.86" atv="30.0" linkedscene="scene_p029" tooltip="Back stairs" />
+	</scene>
+	<scene name="scene_p031" title="Stair landing" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p031.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p031.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p031.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p028" style="skin_hotspotstyle" ath="72.96" atv="-20.43" linkedscene="scene_p028" tooltip="Back stairs (Jan 2021)" />
+		<hotspot name="go_p030" style="skin_hotspotstyle" ath="93.35" atv="24.89" linkedscene="scene_p030" tooltip="Stair window" />
+		<hotspot name="go_p082" style="skin_hotspotstyle" ath="-172.35" atv="5.74" linkedscene="scene_p082" tooltip="Room under works" />
+		<hotspot name="go_p085" style="skin_hotspotstyle" ath="-28.35" atv="12.13" linkedscene="scene_p085" tooltip="Landing corridor" />
+	</scene>
+	<scene name="scene_p032" title="Attic roof space (Jan 2021)" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p032.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p032.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p032.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p035" style="skin_hotspotstyle" ath="93.54" atv="0.0" linkedscene="scene_p035" tooltip="Attic roof space (Jan 2021)" />
+	</scene>
+	<scene name="scene_p033" title="Attic corridor (Jan 2021)" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p033.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p033.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p033.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p034" style="skin_hotspotstyle" ath="-91.97" atv="11.05" linkedscene="scene_p034" tooltip="Attic doorway (Jan 2021)" />
+		<hotspot name="go_p028" style="skin_hotspotstyle" ath="16.51" atv="34.74" linkedscene="scene_p028" tooltip="Back stairs (Jan 2021)" />
+		<hotspot name="go_p036" style="skin_hotspotstyle" ath="93.54" atv="6.32" linkedscene="scene_p036" tooltip="Attic room (Dec 2023)" />
+	</scene>
+	<scene name="scene_p034" title="Attic doorway (Jan 2021)" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p034.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p034.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p034.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p035" style="skin_hotspotstyle" ath="76.24" atv="-15.79" linkedscene="scene_p035" tooltip="Attic roof space (Jan 2021)" />
+		<hotspot name="go_p033" style="skin_hotspotstyle" ath="-82.53" atv="14.21" linkedscene="scene_p033" tooltip="Attic corridor (Jan 2021)" />
+	</scene>
+	<scene name="scene_p035" title="Attic roof space (Jan 2021)" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p035.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p035.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p035.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p034" style="skin_hotspotstyle" ath="-104.54" atv="12.63" linkedscene="scene_p034" tooltip="Attic doorway (Jan 2021)" />
+		<hotspot name="go_p032" style="skin_hotspotstyle" ath="3.93" atv="12.63" linkedscene="scene_p032" tooltip="Attic roof space (Jan 2021)" />
+	</scene>
+	<scene name="scene_p036" title="Attic room (Dec 2023)" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p036.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p036.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p036.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p033" style="skin_hotspotstyle" ath="24.37" atv="7.89" linkedscene="scene_p033" tooltip="Attic corridor (Jan 2021)" />
+		<hotspot name="go_p037" style="skin_hotspotstyle" ath="-161.14" atv="4.74" linkedscene="scene_p037" tooltip="Attic office" />
+	</scene>
+	<scene name="scene_p037" title="Attic office" onstart="if(layer[floors], layer[floors].selectitembyname(g3));" thumburl="panos/p037.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" alt="0.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/p037.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/p037.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="1024,1152,2176" />
+		</image>
+
+	
+		<hotspot name="go_p036" style="skin_hotspotstyle" ath="11.79" atv="6.32" linkedscene="scene_p036" tooltip="Attic room (Dec 2023)" />
+	</scene>
+
+
+
+	<!-- Fidra branding -->
+	<layer name="fidra_logo" keep="true" url="brand/fidra_logo.png" align="lefttop" x="12" y="12" scale="0.4" zorder="50"
+	       handcursor="true" onclick="openurl('https://fidramedia.com',_blank);" />
+	<include url="plugins/combobox.xml" />
+	<combobox name="floors" design="vtour" keep="true" align="righttop" x="12" y="12" width="170" zorder="50">
+		<item name="g0" caption="Outside" onclick="loadscene(scene_p001, null, MERGE, BLEND(0.5));" />
+		<item name="g1" caption="Ground floor" onclick="loadscene(scene_p038, null, MERGE, BLEND(0.5));" />
+		<item name="g2" caption="First floor" onclick="loadscene(scene_p082, null, MERGE, BLEND(0.5));" />
+		<item name="g3" caption="Stairs and attic" onclick="loadscene(scene_p028, null, MERGE, BLEND(0.5));" />
+	</combobox>
+</krpano>
