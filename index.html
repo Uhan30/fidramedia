@@ -351,6 +351,10 @@ footer a{color:#cddbd7}
 .land .sub-p{color:#bcd0ca;max-width:60ch;margin:-.4rem 0 1.4rem}
 .land .cta{margin-top:2rem}
 @media (max-width:760px){.film video{height:62vw;min-height:240px}.film-text{position:static;background:var(--basalt);padding-block:1.6rem 2.4rem}}
+.band{min-height:clamp(440px,52vw,640px)}
+.band .band-img{position:absolute;left:0;right:0;top:-18%;height:136%;will-change:transform}
+.band .band-img img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:760px){.band{min-height:0}.band .band-img{position:relative;top:0;height:62vw;min-height:240px;overflow:hidden}.band .band-img img{transform:scale(1.15)}}
 .film-text .btn{margin-top:1rem}
 .cmap .cgrid{stroke:#fff;stroke-opacity:.35;stroke-width:1.5;vector-effect:non-scaling-stroke}.cmap .cgl{fill:#fff;font:600 18px var(--body);paint-order:stroke;stroke:#16262b;stroke-width:4px;letter-spacing:.02em}.clegend .sw-grid{background:linear-gradient(#fff,#fff) center/100% 1px no-repeat,linear-gradient(#fff,#fff) center/1px 100% no-repeat;border-color:rgba(255,255,255,.5)}.cmap .mk text{fill:#16262b;font:800 22px var(--body);text-anchor:middle;dominant-baseline:middle}
 .cmap .pill text.pill-em{fill:#7dffb0;font-weight:800}
@@ -690,10 +694,10 @@ footer a{color:#cddbd7}
     <h3 class="sub">Mapping examples: practical outputs from real projects.</h3>
     <p class="sub-p">Every site presents different challenges. These examples show how aerial imagery and mapping can help make land, terrain and structures easier to understand.</p>
     <div class="mosaic">
-      <figure class="m-half"><img src="img/work/haddington-height-1600.jpg" srcset="img/work/haddington-height-800.jpg 800w, img/work/haddington-height-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Colour-shaded height model of a housing development on the national grid, with contours, houses and trees standing out above the ground"><figcaption>Height model of the Haddington site, with 1 m contours</figcaption></figure>
-      <figure class="m-half"><img src="img/work/sisters-contours-1600.jpg" srcset="img/work/sisters-contours-800.jpg 800w, img/work/sisters-contours-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Straight-down aerial map of the Five Sisters shale bings with contour lines drawn over it"><figcaption>Contours over an orthophoto: the Five Sisters, West Lothian</figcaption></figure>
-      <figure class="m-half"><img src="img/work/sisters-3d-1600.jpg" srcset="img/work/sisters-3d-800.jpg 800w, img/work/sisters-3d-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="3D model of the Five Sisters shale bings built from drone photos"><figcaption>3D model of the same hills, built from the drone survey</figcaption></figure>
-      <figure class="m-half"><img src="img/work/turbines-terrain-1600.jpg" srcset="img/work/turbines-terrain-800.jpg 800w, img/work/turbines-terrain-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Wind turbines placed on a 3D terrain model of a hillside with an access track"><figcaption>Wind turbines placed on a terrain model for layout checks</figcaption></figure>
+      <figure class="m-half"><img src="img/work/haddington-height-1600.jpg" srcset="img/work/haddington-height-800.jpg 800w, img/work/haddington-height-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Colour-shaded height model of a housing development, with houses and trees standing out above the ground"><figcaption>Height model of the Haddington site</figcaption></figure>
+      <figure class="m-half"><img src="img/work/had-contours-1600.jpg" srcset="img/work/had-contours-800.jpg 800w, img/work/had-contours-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Straight-down aerial map of open development land with half-metre contour lines drawn over it"><figcaption>Half-metre contours over the orthophoto, Haddington</figcaption></figure>
+      <figure class="m-half"><img src="img/work/had-measure-1600.jpg" srcset="img/work/had-measure-800.jpg 800w, img/work/had-measure-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Close-up of new houses from the aerial map, with a roof measured at 9.8 by 11.1 metres and a lorry measured at 8.7 metres"><figcaption>Measured straight from the map: roof 9.8 × 11.1 m</figcaption></figure>
+      <figure class="m-half"><img src="img/work/nigg-breakwater-1600.jpg" srcset="img/work/nigg-breakwater-800.jpg 800w, img/work/nigg-breakwater-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" width="1600" height="900" loading="lazy" alt="Straight-down drone photo of two excavators placing rock on a harbour breakwater"><figcaption>Breakwater construction, Nigg Bay harbour, Aberdeen</figcaption></figure>
     </div>
     <ul class="land-points">
       <li><b>Boundaries</b>Aerial imagery with land boundaries clearly marked, helping owners and agents visualise property extents and surrounding land.</li>
@@ -714,7 +718,7 @@ footer a{color:#cddbd7}
     <div class="who-grid">
       <div class="who"><h3>Industrial and energy sites</h3><p>Site safety and asset plans, roof and plant checks, progress records and 360° tours for inductions at factories, substations, wind farms and solar sites.</p></div>
       <div class="who"><h3>Builders and developers</h3><p>Measured progress maps, site constraints plans, stockpile volumes and repeat photography to keep everyone up to date through a build.</p></div>
-      <div class="who"><h3>Ports, coastal and infrastructure</h3><p>Progress records for harbours, sea walls and roads, with armour and stockpile checks and fly-through films from the same survey.</p></div>
+      <div class="who"><h3>Ports, coastal and infrastructure</h3><p>Progress records for harbours, sea walls and roads, with armour and stockpile checks and measured maps from every visit.</p></div>
       <div class="who"><h3>Architects, planners and land agents</h3><p>Constraints plans, height models, 3D context and fresh aerial imagery to inform early design, site appraisal and planning.</p></div>
       <div class="who"><h3>Estates, farms and the environment</h3><p>Field, woodland and boundary mapping, peatland condition maps and plans ready for grant, tenancy and sale paperwork.</p></div>
       <div class="who"><h3>Property, holiday lets and venues</h3><p>Interactive 360° tours and aerial photography that let buyers, guests and families explore a place before they visit.</p></div>
@@ -815,17 +819,13 @@ footer a{color:#cddbd7}
   </div>
 </section>
 
-<section class="film" aria-labelledby="film-title">
-  <video id="film" muted loop playsinline preload="none" poster="img/harbour-film-poster.jpg" aria-label="Fly-through of a 3D model of a harbour under construction: rock armour, concrete armour units, a block yard and plant on the breakwater">
-    <source src="media/harbour-film-960.mp4" type="video/mp4" media="(max-width:760px)">
-    <source src="media/harbour-film.mp4" type="video/mp4">
-  </video>
-  <button class="pause" type="button" id="pause" aria-pressed="false">Pause film</button>
+<section class="film band" aria-labelledby="film-title">
+  <div class="band-img" aria-hidden="true"><img src="img/haddington-band-2400.jpg" srcset="img/haddington-band-1200.jpg 1200w, img/haddington-band-2400.jpg 2400w" sizes="100vw" width="2400" height="1650" loading="lazy" alt=""></div>
   <div class="film-text">
     <div class="wrap">
-      <h2 id="film-title">Every survey can end with a fly-through.</h2>
-      <p><b>A harbour build, explained in under a minute.</b> Nigg Bay harbour in Aberdeen, captured in a single drone survey and turned into a 3D model you can fly through. It shows the whole site in a way photos and drawings can't, and helps explain progress to clients, funders and the public. A fly-through can be made from any mapping job.</p>
-      <a class="btn lamp" href="#contact">Discuss a film or 3D model</a>
+      <h2 id="film-title">Measured from the air. Ready to use on the ground.</h2>
+      <p><b>One flight, many answers.</b> Every survey gives you a sharp, measured map of the whole site at 2 cm detail, tied to the national grid. From that one map we can measure plots and roads, track progress, check levels and plan what comes next.</p>
+      <a class="btn lamp" href="#contact">Discuss your site</a>
     </div>
   </div>
 </section>
@@ -1017,16 +1017,16 @@ footer a{color:#cddbd7}
     t.addEventListener('keydown',function(e){ var k=e.key, n=null; if(k==='ArrowRight')n=ptabs[(i+1)%ptabs.length]; if(k==='ArrowLeft')n=ptabs[(i-1+ptabs.length)%ptabs.length]; if(n){ e.preventDefault(); showTab(n); n.focus(); } });
   });
 
-  // film
-  var film=document.getElementById('film'), pause=document.getElementById('pause');
-  function setPaused(p){ if(p){film.pause()}else{film.play().catch(function(){})} pause.textContent=p?'Play film':'Pause film'; pause.setAttribute('aria-pressed',p?'true':'false'); }
-  var userPaused=reduce;
-  if(reduce){ setPaused(true); }
-  pause.addEventListener('click',function(){ userPaused=!film.paused; setPaused(userPaused); });
-  // only load and play the film when it scrolls into view
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ if(!userPaused) setPaused(false); } else if(!film.paused){ film.pause(); } }); },{rootMargin:'200px 0px'}).observe(film);
-  } else if(!reduce){ setPaused(false); }
+  // scrolling band image
+  var band=document.querySelector('.band'), bimg=band&&band.querySelector('.band-img');
+  if(band && bimg && !reduce){
+    var ticking=false;
+    function moveBand(){ ticking=false; var r=band.getBoundingClientRect(), vh=window.innerHeight;
+      if(r.bottom<0||r.top>vh) return;
+      var p=(r.top+r.height/2-vh/2)/(vh/2+r.height/2); bimg.style.transform='translate3d(0,'+(p*-12).toFixed(2)+'%,0)'; }
+    window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(moveBand); } },{passive:true});
+    window.addEventListener('resize',moveBand); moveBand();
+  }
 
   // drag-scroll panoramas
   document.querySelectorAll('.strip-scroll').forEach(function(s){
