@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /tours/park-hill-2024-preview/
 
 Sitemap: https://fidramedia.com/sitemap.xml
