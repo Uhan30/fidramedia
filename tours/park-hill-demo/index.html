@@ -25,48 +25,73 @@
 .strip button img{display:block;width:100%;height:64px;object-fit:cover}
 .strip button span{display:block;padding:5px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .strip button[aria-current=true]{border-color:var(--lamp)}
+.tabs{position:fixed;left:0;right:0;bottom:calc(98px + env(safe-area-inset-bottom));z-index:6;display:flex;gap:6px;overflow-x:auto;padding:0 16px;scrollbar-width:none}
+.tabs:empty{display:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;border:0;border-radius:20px;padding:6px 12px;font:600 12px Figtree,sans-serif;background:rgba(22,38,43,.75);color:var(--sand);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--lamp);color:var(--basalt)}
+body.has-tabs .credit{bottom:calc(140px + env(safe-area-inset-bottom))}
 .credit{position:fixed;right:16px;bottom:calc(112px + env(safe-area-inset-bottom));z-index:5;font:500 11px Figtree,sans-serif;color:var(--sand);background:rgba(22,38,43,.7);padding:5px 9px;border-radius:20px;text-decoration:none}
 .pnlm-hotspot.pnlm-scene{width:46px;height:46px;border-radius:50%;background:rgba(251,248,241,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5l7 8h-4v6H9v-6H5z' fill='%2316262b'/%3E%3C/svg%3E") center/26px no-repeat;box-shadow:0 2px 10px rgba(0,0,0,.4);border:3px solid var(--lamp)}
 .pnlm-tooltip span{font-family:Figtree,sans-serif}
 .pnlm-controls-container{top:64px}
 .pnlm-panorama-info{display:none!important}
 .title{background:rgba(22,38,43,.55);padding:6px 10px;border-radius:8px}
-@media (max-width:520px){.title{font-size:14px}.strip button{width:92px}.strip button img{height:54px}.credit{bottom:calc(100px + env(safe-area-inset-bottom))}}
+@media (max-width:520px){.title{font-size:14px}.strip button{width:92px}.strip button img{height:54px}.tabs{position:fixed;left:0;right:0;bottom:calc(98px + env(safe-area-inset-bottom));z-index:6;display:flex;gap:6px;overflow-x:auto;padding:0 16px;scrollbar-width:none}
+.tabs:empty{display:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;border:0;border-radius:20px;padding:6px 12px;font:600 12px Figtree,sans-serif;background:rgba(22,38,43,.75);color:var(--sand);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--lamp);color:var(--basalt)}
+body.has-tabs .credit{bottom:calc(140px + env(safe-area-inset-bottom))}
+.credit{bottom:calc(100px + env(safe-area-inset-bottom))}}
 </style>
 </head>
 <body>
 <div id="tour" role="application" aria-label="360 degree tour"></div>
 <header class="bar"><a class="brand" href="https://fidramedia.com" target="_blank" rel="noopener">FIDRA <b>MEDIA</b></a>
 <div class="title">Park Hill<small id="room"></small></div></header>
+<div class="tabs" id="tabs" role="tablist" aria-label="Floors"></div>
 <nav class="strip" id="strip" aria-label="Rooms"></nav>
 <a class="credit" href="https://fidramedia.com" target="_blank" rel="noopener">360° tour by Fidra Media</a>
 <script>
-const TOUR = {"title": "Park Hill", "client": "Demo", "first_scene": "air", "auto_rotate": true, "scenes": [{"id": "air", "file": "air-2024.jpg", "name": "Aerial view", "start_yaw": 0, "links": [{"to": "lounge", "yaw": 0, "pitch": -35}, {"to": "pool", "yaw": 120, "pitch": -35}], "haov": 360, "vaov": 180.0, "files": {"6k": "panos/air-6k.jpg", "4k": "panos/air-4k.jpg"}, "thumb": "panos/air-thumb.jpg"}, {"id": "lounge", "file": "lounge-2024.jpg", "name": "Lounge", "start_yaw": 0, "links": [{"to": "dining", "yaw": 90, "pitch": -10}, {"to": "air", "yaw": 180, "pitch": -10}], "haov": 360, "vaov": 150.0, "files": {"6k": "panos/lounge-6k.jpg", "4k": "panos/lounge-4k.jpg"}, "thumb": "panos/lounge-thumb.jpg"}, {"id": "dining", "file": "dining-2024.jpg", "name": "Dining room", "start_yaw": 0, "links": [{"to": "lounge", "yaw": -90, "pitch": -10}], "haov": 360, "vaov": 150.0, "files": {"6k": "panos/dining-6k.jpg", "4k": "panos/dining-4k.jpg"}, "thumb": "panos/dining-thumb.jpg"}, {"id": "pool", "file": "pool-2025.jpg", "name": "Pool", "start_yaw": 0, "links": [{"to": "air", "yaw": 180, "pitch": -10}], "haov": 360, "vaov": 150.0, "files": {"6k": "panos/pool-6k.jpg", "4k": "panos/pool-4k.jpg"}, "thumb": "panos/pool-thumb.jpg"}]};
+const TOUR = {"title": "Park Hill", "client": "Park Hill Estate", "first_scene": "p002", "auto_rotate": true, "groups": null, "scenes": [{"id": "p002", "file": "/mnt/user-data/uploads/Fidra_Media/5. PROJECTS/2024/08 2024 park hill/processing/Aerial/2_sky.jpg", "name": "Aerial view over the estate", "group": "Outside", "start_yaw": 0, "links": [], "multiRes": {"path": "/%l/%s%y_%x", "fallbackPath": "/fallback/%s", "extension": "jpg", "tileResolution": 1024, "maxLevel": 3, "cubeResolution": 4096, "basePath": "panos/p002"}, "thumb": "panos/p002-thumb.jpg", "haov": 360, "vaov": 180}, {"id": "p017", "file": "/mnt/user-data/uploads/Fidra_Media/5. PROJECTS/2024/08 2024 park hill/360/processed1/Outdoors/IMG_20240811_131616_149.jpg", "name": "New pool", "group": "Outside", "start_yaw": 0, "links": [], "multiRes": {"path": "/%l/%s%y_%x", "fallbackPath": "/fallback/%s", "extension": "jpg", "tileResolution": 1024, "maxLevel": 2, "cubeResolution": 2048, "basePath": "panos/p017"}, "thumb": "panos/p017-thumb.jpg", "haov": 360, "vaov": 180}, {"id": "p041", "file": "/mnt/user-data/uploads/Fidra_Media/5. PROJECTS/2024/08 2024 park hill/360/processed1/Ground Floor/IMG_20240811_133111_156.jpg", "name": "Entrance hall", "group": "Ground floor", "start_yaw": 0, "links": [{"to": "p046", "yaw": -180.0, "pitch": -4.26}], "multiRes": {"path": "/%l/%s%y_%x", "fallbackPath": "/fallback/%s", "extension": "jpg", "tileResolution": 1024, "maxLevel": 2, "cubeResolution": 2048, "basePath": "panos/p041"}, "thumb": "panos/p041-thumb.jpg", "haov": 360, "vaov": 180}, {"id": "p046", "file": "/mnt/user-data/uploads/Fidra_Media/5. PROJECTS/2024/08 2024 park hill/360/processed1/Ground Floor/IMG_20240811_133353_161.jpg", "name": "Great hall", "group": "Ground floor", "start_yaw": 0, "links": [{"to": "p041", "yaw": -27.53, "pitch": -7.8}], "multiRes": {"path": "/%l/%s%y_%x", "fallbackPath": "/fallback/%s", "extension": "jpg", "tileResolution": 1024, "maxLevel": 2, "cubeResolution": 2048, "basePath": "panos/p046"}, "thumb": "panos/p046-thumb.jpg", "haov": 360, "vaov": 180}, {"id": "p047", "file": "/mnt/user-data/uploads/Fidra_Media/5. PROJECTS/2024/08 2024 park hill/360/processed1/Ground Floor/IMG_20240811_133600_164.jpg", "name": "Dining room", "group": "Ground floor", "start_yaw": 0, "links": [], "multiRes": {"path": "/%l/%s%y_%x", "fallbackPath": "/fallback/%s", "extension": "jpg", "tileResolution": 1024, "maxLevel": 2, "cubeResolution": 2048, "basePath": "panos/p047"}, "thumb": "panos/p047-thumb.jpg", "haov": 360, "vaov": 180}, {"id": "p051", "file": "/mnt/user-data/uploads/Fidra_Media/5. PROJECTS/2024/08 2024 park hill/360/processed1/Ground Floor/IMG_20240811_133451_163.jpg", "name": "Lounge", "group": "Ground floor", "start_yaw": 0, "links": [], "multiRes": {"path": "/%l/%s%y_%x", "fallbackPath": "/fallback/%s", "extension": "jpg", "tileResolution": 1024, "maxLevel": 2, "cubeResolution": 2048, "basePath": "panos/p051"}, "thumb": "panos/p051-thumb.jpg", "haov": 360, "vaov": 180}]};
 const big = (() => { try { const c=document.createElement('canvas').getContext('webgl'); return c && c.getParameter(c.MAX_TEXTURE_SIZE) >= 8192 && innerWidth > 900; } catch(e){ return false; } })();
 const scenes = {};
 for (const s of TOUR.scenes) {
-  scenes[s.id] = {
-    title: s.name, type: 'equirectangular', panorama: s.files[big ? '6k' : '4k'],
-    haov: s.haov, vaov: s.vaov, yaw: s.start_yaw || 0, hfov: 100,
+  scenes[s.id] = Object.assign(s.multiRes ? { type: 'multires', multiRes: s.multiRes }
+      : { type: 'equirectangular', panorama: s.files[big ? '6k' : '4k'], haov: s.haov, vaov: s.vaov }, {
+    title: s.name, yaw: s.start_yaw || 0, hfov: 90, maxHfov: 110, minHfov: 40,
     hotSpots: (s.links || []).map(l => ({ type:'scene', sceneId:l.to, yaw:l.yaw, pitch:l.pitch ?? -10,
       text: (TOUR.scenes.find(x => x.id === l.to) || {}).name || '' }))
-  };
+  });
   if (s.vaov < 180) { scenes[s.id].minPitch = -s.vaov/2; scenes[s.id].maxPitch = s.vaov/2; }
 }
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const viewer = pannellum.viewer('tour', { default: { firstScene: TOUR.first_scene, autoLoad: true, compass: false,
   sceneFadeDuration: 600, autoRotate: (TOUR.auto_rotate && !reduce) ? -1.5 : 0, autoRotateInactivityDelay: 8000,
   showZoomCtrl: !matchMedia('(pointer: coarse)').matches }, scenes });
-const strip = document.getElementById('strip'), room = document.getElementById('room');
-for (const s of TOUR.scenes) {
-  const b = document.createElement('button');
-  b.innerHTML = `<img src="${s.thumb}" alt="" loading="lazy"><span></span>`;
-  b.querySelector('span').textContent = s.name;
-  b.onclick = () => viewer.loadScene(s.id);
-  b.dataset.id = s.id; strip.appendChild(b);
+const strip = document.getElementById('strip'), room = document.getElementById('room'), tabs = document.getElementById('tabs');
+const groups = TOUR.groups && TOUR.groups.length > 1 ? TOUR.groups : null;
+let shownGroup = null;
+function showGroup(g){
+  shownGroup = g; strip.innerHTML = '';
+  for (const s of TOUR.scenes.filter(x => !groups || x.group === g)) {
+    const b = document.createElement('button');
+    b.innerHTML = `<img src="${s.thumb}" alt="" loading="lazy"><span></span>`;
+    b.querySelector('span').textContent = s.name;
+    b.onclick = () => viewer.loadScene(s.id);
+    b.dataset.id = s.id; strip.appendChild(b);
+  }
+  for (const t of tabs.children) t.setAttribute('aria-selected', t.textContent === g);
 }
-function mark(id){ for (const b of strip.children) b.setAttribute('aria-current', b.dataset.id === id);
-  room.textContent = (TOUR.scenes.find(x => x.id === id) || {}).name || ''; }
+if (groups) {
+  document.body.classList.add('has-tabs');
+  for (const g of groups) { const t = document.createElement('button'); t.setAttribute('role','tab'); t.textContent = g; t.onclick = () => showGroup(g); tabs.appendChild(t); }
+}
+function mark(id){
+  const sc = TOUR.scenes.find(x => x.id === id) || {};
+  if (groups && sc.group !== shownGroup) showGroup(sc.group);
+  if (!groups && !strip.children.length) showGroup(null);
+  for (const b of strip.children) { const on = b.dataset.id === id; b.setAttribute('aria-current', on); if (on) b.scrollIntoView({inline:'center', block:'nearest'}); }
+  room.textContent = sc.name || ''; }
 viewer.on('scenechange', mark); mark(TOUR.first_scene);
 </script>
 </body>
