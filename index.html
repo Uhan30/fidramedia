@@ -348,6 +348,28 @@ footer a{color:#cddbd7}
 .land .sub-p{color:#bcd0ca;max-width:60ch;margin:-.4rem 0 1.4rem}
 .land .cta{margin-top:2rem}
 .film-text .btn{margin-top:1rem}
+/* constraints map */
+.cmap{aspect-ratio:auto;background:#f6f3ea;padding:10px;border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.cmap-frame{position:relative;aspect-ratio:3/2;overflow:hidden;outline:1px solid #16262b;outline-offset:3px;background:var(--basalt-2)}
+.cmap-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.cmap-frame svg{position:absolute;inset:0;width:100%;height:100%}
+.cmap .pill rect{fill:rgba(16,28,32,.88)}
+.cmap .cpt text{fill:#16262b;font:900 24px var(--body);text-anchor:middle;dominant-baseline:middle}
+.cmap .cnorth circle,.cmap .cscale rect{fill:rgba(16,28,32,.86)}
+.cmap .cnorth path{fill:#fff}
+.cmap .cnorth text,.cmap .cscale text{fill:#fff;font:700 19px var(--body);text-anchor:middle;dominant-baseline:middle}
+.cmap-title{display:flex;justify-content:space-between;align-items:baseline;gap:.3rem 1rem;flex-wrap:wrap;margin-top:12px;padding:.55rem .2rem .1rem;border-top:2px solid #16262b;color:#16262b;font-size:.86rem;line-height:1.35}
+.cmap-title b{font-family:var(--display);font-stretch:110%;font-size:.95rem;margin-right:.5rem;text-transform:uppercase;letter-spacing:.05em}
+.cmap-meta{color:#53656a;font-variant-numeric:tabular-nums;font-size:.8rem}
+.ckey{grid-template-columns:1fr 1fr;gap:.45rem 1rem;font-size:.9rem;counter-reset:ck}
+.ckey li{display:flex;align-items:flex-start;line-height:1.3}
+.ckey span{flex:none;color:var(--basalt);counter-increment:ck}
+.ckey span::before{content:counter(ck)}
+.clegend{margin-top:1rem}
+.clegend .sw-red{background:transparent;border:2.5px solid #ff3b30;border-radius:2px}
+.clegend .sw-hatch{background:repeating-linear-gradient(45deg,#c9a6ff 0 2px,transparent 2px 6px)}
+.clegend .sw-dash{background:linear-gradient(90deg,#9ed2ff 0 42%,transparent 42% 58%,#9ed2ff 58%);height:3px!important;border:0!important;vertical-align:4px!important}
+@media (max-width:600px){.cmap{padding:6px}.ckey{grid-template-columns:1fr}.cmap-meta{display:none}}
 </style>
 </head>
 <body>
@@ -508,27 +530,77 @@ footer a{color:#cddbd7}
 <section id="mapping" class="land" aria-labelledby="land-title">
   <div class="wrap">
     <div class="head">
-      <div><p class="kicker">Mapping and GIS</p><h2 id="land-title">Maps and reports for the land you look after.</h2></div>
-      <p>A single drone survey can provide a detailed aerial record of a site, with the potential to produce several useful outputs. The right deliverables depend on the land, the questions being asked and how the information will be used. From estate boundaries and field areas to construction sites and golf course features, we tailor mapping outputs to the needs of each client. Based in Gullane, we work with landowners and businesses throughout East Lothian and across Scotland.</p>
+      <div><p class="kicker">Mapping and GIS</p><h2 id="land-title">Site constraints and land mapping.</h2></div>
+      <p>We combine a fresh drone survey with official mapping data to show what affects a piece of land: boundaries, protected trees, listed buildings, flood risk, paths, and pipes and cables. The result is a clear, measured plan that owners, agents and architects can all work from. The right outputs depend on the site and on the decision you need to make. Based in Gullane, we work with landowners and businesses across East Lothian and Scotland.</p>
     </div>
     <div class="products">
-      <div class="ptabs" role="tablist" aria-label="Example map products"><button class="ptab" type="button" role="tab" id="tab-estate" aria-controls="panel-estate" aria-selected="true">Estates and land</button><button class="ptab" type="button" role="tab" id="tab-farm" aria-controls="panel-farm" aria-selected="false" tabindex="-1">Farms</button><button class="ptab" type="button" role="tab" id="tab-site" aria-controls="panel-site" aria-selected="false" tabindex="-1">Building sites</button><button class="ptab" type="button" role="tab" id="tab-care" aria-controls="panel-care" aria-selected="false" tabindex="-1">Care homes and hotels</button><button class="ptab" type="button" role="tab" id="tab-holiday" aria-controls="panel-holiday" aria-selected="false" tabindex="-1">Holiday homes</button></div>
+      <div class="ptabs" role="tablist" aria-label="Example map products"><button class="ptab" type="button" role="tab" id="tab-estate" aria-controls="panel-estate" aria-selected="true">Site constraints</button><button class="ptab" type="button" role="tab" id="tab-farm" aria-controls="panel-farm" aria-selected="false" tabindex="-1">Farms</button><button class="ptab" type="button" role="tab" id="tab-site" aria-controls="panel-site" aria-selected="false" tabindex="-1">Building sites</button><button class="ptab" type="button" role="tab" id="tab-care" aria-controls="panel-care" aria-selected="false" tabindex="-1">Care homes and hotels</button><button class="ptab" type="button" role="tab" id="tab-holiday" aria-controls="panel-holiday" aria-selected="false" tabindex="-1">Holiday homes</button></div>
       <div class="ppanel" role="tabpanel" id="panel-estate" aria-labelledby="tab-estate">
-        <figure class="map">
-          <img src="img/products/estate-1600.jpg" srcset="img/products/estate-900.jpg 900w, img/products/estate-1600.jpg 1600w" sizes="(max-width:900px) 100vw, 62vw" width="1600" height="1067" loading="lazy" alt="Aerial view of a country estate with the boundary, woodland, parkland and an arable field marked as a map overlay">
-          <svg viewBox="0 0 1600 1067" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,380 140,445 150,480 250,520 320,600 380,700 410,840 330,1000 300,1067 0,1067" fill="#1f7a3a" fill-opacity="0.35" stroke="#9be3a8" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="700,520 820,520 1000,500 1180,470 1300,470 1350,500 1250,540 1160,600 1080,660 980,690 830,720 700,790 600,760 690,640" fill="#1f7a3a" fill-opacity="0.35" stroke="#9be3a8" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="140,445 330,420 560,398 700,410 720,470 700,520 690,600 580,690 470,760 410,840 380,700 320,600 250,520 150,480" fill="#5cc46a" fill-opacity="0.28" stroke="#d8ffd0" stroke-width="2" vector-effect="non-scaling-stroke"/><polygon points="300,1067 420,960 560,870 700,790 830,720 980,690 1080,660 1160,600 1250,540 1350,500 1480,480 1600,520 1600,1067" fill="#e8b34a" fill-opacity="0.22" stroke="#ffe2a0" stroke-width="2" vector-effect="non-scaling-stroke"/><polyline class="ln" points="300,1067 420,960 560,870 700,790 830,720 980,690 1080,660 1160,600 1250,540 1350,500 1480,480 1460,430 1478,392" fill="none" stroke="#16262b" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/><polyline class="ln" points="300,1067 420,960 560,870 700,790 830,720 980,690 1080,660 1160,600 1250,540 1350,500 1480,480 1460,430 1478,392" fill="none" stroke="#ffcc33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="14 9"/><g class="pill" transform="translate(430,560)"><rect x="-130" y="-19" width="260" height="38" rx="19"/><circle cx="-102.1" cy="0" r="7" fill="#5cc46a"/><text x="8" y="1">Parkland · 6.2 ha</text></g><g class="pill" transform="translate(170,820)"><rect x="-136" y="-19" width="273" height="38" rx="19"/><circle cx="-108.39999999999998" cy="0" r="7" fill="#1f7a3a"/><text x="8" y="1">West wood · 4.1 ha</text></g><g class="pill" transform="translate(1010,580)"><rect x="-162" y="-19" width="323" height="38" rx="19"/><circle cx="-133.6" cy="0" r="7" fill="#1f7a3a"/><text x="8" y="1">Woodland belt · 2.8 ha</text></g><g class="pill" transform="translate(1120,900)"><rect x="-163" y="-19" width="326" height="38" rx="19"/><circle cx="-135" cy="0" r="7" fill="#e8b34a"/><text x="8" y="1">Arable land · 21.5 ha</text></g><g class="pill" transform="translate(650,940)"><rect x="-180" y="-19" width="361" height="38" rx="19"/><circle cx="-152.5" cy="0" r="7" fill="#ffcc33"/><text x="8" y="1">Boundary checked · 2.4 km</text></g><g class="mk" transform="translate(790,430)"><circle r="19" fill="#ffcc33"/><text y="1">1</text></g><g class="mk" transform="translate(925,418)"><circle r="19" fill="#ffcc33"/><text y="1">2</text></g><g class="mk" transform="translate(410,600)"><circle r="19" fill="#ff5a4f"/><text y="1">3</text></g><g class="mk" transform="translate(1462,470)"><circle r="19" fill="#ffcc33"/><text y="1">4</text></g></svg>
-          <span class="sample">Illustrative layout</span>
+        <figure class="map cmap">
+          <div class="cmap-frame">
+            <img src="img/products/constraints-1800.jpg" srcset="img/products/constraints-900.jpg 900w, img/products/constraints-1800.jpg 1800w" sizes="(max-width:900px) 100vw, 62vw" width="1800" height="1200" loading="lazy" alt="Straight-down aerial map of a walled garden, farm steading and woodland, with the site boundary and planning constraints drawn over it: a listed building, tree root protection zones, woodland, a core path, a water main easement, a surface water flood area and an ecology note">
+            <svg viewBox="0 0 1800 1200" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <pattern id="hx-lb" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="18" height="18" fill="#8e5bd6" fill-opacity=".16"/><line x1="0" y1="0" x2="0" y2="18" stroke="#c9a6ff" stroke-width="3"/></pattern>
+                <pattern id="hx-wd" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="22" height="22" fill="#1f7a3a" fill-opacity=".2"/><line x1="0" y1="0" x2="0" y2="22" stroke="#7fe08f" stroke-width="2.5"/></pattern>
+                <pattern id="hx-fl" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#2f8fe0" fill-opacity=".22"/><circle cx="8" cy="8" r="2.4" fill="#9ed2ff"/></pattern>
+              </defs>
+              <!-- woodland -->
+              <path d="M985,0 H1800 V1200 H1490 L1452,1052 L1385,905 L1300,768 L1238,640 L1186,500 L1104,338 L1030,205 Z" fill="url(#hx-wd)" stroke="#7fe08f" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+              <!-- listed building -->
+              <path d="M0,538 L452,138 L503,132 L660,262 L604,322 L18,912 L0,918 Z" fill="url(#hx-lb)" stroke="#c9a6ff" stroke-width="3" vector-effect="non-scaling-stroke"/>
+              <!-- surface water flood -->
+              <path d="M560,1200 C585,1110 650,1060 760,1015 C860,975 975,960 1060,1015 C1125,1060 1160,1130 1178,1200 Z" fill="url(#hx-fl)" stroke="#9ed2ff" stroke-width="2.5" vector-effect="non-scaling-stroke" stroke-dasharray="8 6"/>
+              <!-- water main easement -->
+              <polyline points="0,968 170,830 330,700 520,522 700,350 860,178" fill="none" stroke="#5fb8ff" stroke-opacity=".22" stroke-width="66" stroke-linecap="butt" stroke-linejoin="round"/>
+              <polyline points="0,968 170,830 330,700 520,522 700,350 860,178" fill="none" stroke="#9ed2ff" stroke-width="3" stroke-dasharray="18 8 4 8" vector-effect="non-scaling-stroke"/>
+              <!-- tree root protection areas -->
+              <g fill="#ff9d3a" fill-opacity=".14" stroke="#ffb35c" stroke-width="3" stroke-dasharray="10 7" vector-effect="non-scaling-stroke">
+                <circle cx="425" cy="690" r="135"/><circle cx="195" cy="1015" r="165"/><circle cx="822" cy="1158" r="105"/>
+              </g>
+              <g fill="#ffb35c"><circle cx="425" cy="690" r="7"/><circle cx="195" cy="1015" r="7"/><circle cx="822" cy="1158" r="7"/></g>
+              <!-- core path -->
+              <polyline points="800,0 832,128 962,205 1088,332 1162,472 1242,622 1302,772 1382,902 1442,1032 1472,1200" fill="none" stroke="#16262b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              <polyline points="800,0 832,128 962,205 1088,332 1162,472 1242,622 1302,772 1382,902 1442,1032 1472,1200" fill="none" stroke="#5ff07a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 10" vector-effect="non-scaling-stroke"/>
+              <!-- site boundary (red line) -->
+              <path d="M543,508 L858,156 L1198,526 L913,850 Z" fill="#fff" fill-opacity=".06" stroke="#16262b" stroke-width="8" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              <path d="M543,508 L858,156 L1198,526 L913,850 Z" fill="none" stroke="#ff3b30" stroke-width="4.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              <!-- point constraints -->
+              <g class="cpt" transform="translate(1062,668)"><path d="M0,-24 L22,14 L-22,14 Z" fill="#ffd23f" stroke="#16262b" stroke-width="3"/><text y="4">!</text></g>
+              <g class="cpt" transform="translate(925,862)"><rect x="-18" y="-18" width="36" height="36" rx="5" fill="#fff" stroke="#16262b" stroke-width="3"/><path d="M-8,8 L0,-9 L8,8" fill="none" stroke="#16262b" stroke-width="3.5" stroke-linejoin="round"/></g>
+              <!-- numbered callouts -->
+              <g class="mk"><g transform="translate(250,560)"><circle r="21" fill="#c9a6ff"/><text y="1">1</text></g><g transform="translate(470,830)"><circle r="21" fill="#ffb35c"/><text y="1">2</text></g><g transform="translate(1560,300)"><circle r="21" fill="#7fe08f"/><text y="1">3</text></g><g transform="translate(1205,350)"><circle r="21" fill="#5ff07a"/><text y="1">4</text></g><g transform="translate(395,560)"><circle r="21" fill="#9ed2ff"/><text y="1">5</text></g><g transform="translate(870,1080)"><circle r="21" fill="#9ed2ff"/><text y="1">6</text></g><g transform="translate(1110,640)"><circle r="21" fill="#ffd23f"/><text y="1">7</text></g><g transform="translate(980,895)"><circle r="21" fill="#fff"/><text y="1">8</text></g></g>
+              <g class="pill" transform="translate(870,560)"><rect x="-150" y="-21" width="300" height="42" rx="6"/><circle cx="-124" cy="0" r="7" fill="#ff3b30"/><text x="10" y="1">Site area · 0.17 ha</text></g>
+              <!-- north arrow + scale -->
+              <g class="cnorth" transform="translate(1712,96)"><circle r="44"/><path d="M0,-32 L13,14 L0,6 L-13,14 Z"/><text y="30">N</text></g>
+              <g class="cscale" transform="translate(1500,1132)"><rect x="-24" y="-46" width="284" height="72" rx="6"/><path d="M0,0 h55 v-10 h-55 Z" fill="#fff"/><path d="M55,0 h55 v-10 h-55 Z" fill="#16262b" stroke="#fff" stroke-width="2"/><path d="M110,0 h110 v-10 h-110 Z" fill="#fff"/><path d="M0,-10 V6 M110,-10 V6 M220,-10 V6" stroke="#fff" stroke-width="2"/><text x="0" y="-24">0</text><text x="110" y="-24">10</text><text x="220" y="-24">20 m</text></g>
+            </svg>
+            <span class="cmap-tick t1"></span><span class="cmap-tick t2"></span><span class="cmap-tick t3"></span><span class="cmap-tick t4"></span>
+          </div>
+          <figcaption class="cmap-title">
+            <span><b>Site constraints plan</b> Example: walled garden and steading, East Lothian</span>
+            <span class="cmap-meta">Drawing FM-C01 · Rev A · Illustrative layout</span>
+          </figcaption>
         </figure>
         <div class="pinfo">
-          <h3>Boundary and land map</h3>
-          <p class="lead-in">Know what's where. Understand the land you manage.</p>
-          <p>Aerial imagery provides a clear backdrop for mapped boundaries, land parcels and key features. The resulting map can help owners, land agents and other stakeholders discuss a site using the same visual reference.</p>
-          <ul class="legend"><li><i style="background:#ffcc33"></i>Boundary</li><li><i style="background:#5cc46a"></i>Parkland</li><li><i style="background:#1f7a3a"></i>Woodland</li><li><i style="background:#e8b34a"></i>Arable land</li></ul>
-          <ol class="map-key"><li><span>1</span>The house</li><li><span>2</span>Main drive</li><li><span>3</span>Tree flagged for a safety check</li><li><span>4</span>Field gate on the boundary</li></ol>
-          <h4>Depending on the scope of the project, deliverables can include:</h4>
-          <ul class="gets"><li>Boundary lines reviewed against visible ground features and available reference information</li><li>Areas for fields, woodland and other land parcels, in hectares and acres</li><li>Numbered locations for trees, gates, access points and other features requiring attention</li><li>GIS-compatible files, Google Earth data and a printable PDF</li></ul>
-          <p class="for"><b>Useful for:</b> estate management, landowners, land agents and property professionals</p>
-          <p class="note">Mapping outputs are prepared to the agreed specification. Where legal boundary determination or a formal land survey is required, an appropriately qualified surveyor may be needed.</p>
+          <h3>Site constraints map</h3>
+          <p class="lead-in">Know what limits a site before you spend money on it.</p>
+          <p>We put current drone imagery of the site together with the official datasets that matter, such as listed buildings, protected trees, flood risk, woodland, paths, and pipes and cables, and draw it all on one clear plan. You can see straight away what affects the site and how much of it is free to use.</p>
+          <ol class="map-key ckey">
+            <li><span style="background:#c9a6ff"></span>Listed building and its setting</li>
+            <li><span style="background:#ffb35c"></span>Tree root protection zones</li>
+            <li><span style="background:#7fe08f"></span>Woodland on the national woodland inventory</li>
+            <li><span style="background:#5ff07a"></span>Core path, public access to keep open</li>
+            <li><span style="background:#9ed2ff"></span>Water main with a 6 m easement</li>
+            <li><span style="background:#9ed2ff"></span>Surface water flood risk (SEPA)</li>
+            <li><span style="background:#ffd23f"></span>Possible bat roost, survey needed</li>
+            <li><span style="background:#fff"></span>Existing site access</li>
+          </ol>
+          <ul class="legend clegend"><li><i class="sw-red"></i>Site boundary</li><li><i class="sw-hatch"></i>Hatched areas are constraints</li><li><i class="sw-dash"></i>Dashed lines are indicative</li></ul>
+          <h4>What you get</h4>
+          <ul class="gets"><li>An A3 constraints plan as a PDF, with a north arrow, scale bar, legend and title block</li><li>A short summary table listing each constraint, where the data came from and how current it is</li><li>Fresh aerial imagery of the site, so the plan shows what is there now</li><li>GIS files that open in QGIS, ArcGIS or Google Earth, so your architect or agent can build on them</li></ul>
+          <p class="for"><b>Useful for:</b> landowners, developers, architects, land agents and anyone buying or planning a site</p>
+          <p class="note">A constraints map is an early desk-based check. It shows where specialist surveys may be needed, such as tree, ecology or flood assessments. It does not replace them, and it is not a legal boundary survey.</p>
         </div>
       </div>
       <div class="ppanel" role="tabpanel" id="panel-farm" aria-labelledby="tab-farm" hidden>
