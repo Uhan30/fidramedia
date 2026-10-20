@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Park Hill | 360° tour by Fidra Media</title>
+<meta name="description" content="Interactive 360° tour of Park Hill, photographed by Fidra Media.">
+<meta name="theme-color" content="#16262b">
+<link rel="stylesheet" href="lib/pannellum.css">
+<script src="lib/pannellum.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--basalt:#16262b;--sea:#2f6f73;--sand:#efe6d3;--white:#fbf8f1;--lamp:#d99a27}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--basalt);color:var(--white);font-family:Figtree,system-ui,sans-serif}
+#tour{position:fixed;inset:0}
+.bar{position:fixed;left:0;right:0;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px max(16px,env(safe-area-inset-left));background:linear-gradient(rgba(22,38,43,.85),rgba(22,38,43,0));pointer-events:none}
+.brand{font:700 13px/1 Archivo,sans-serif;letter-spacing:.14em;color:var(--sand);text-decoration:none;pointer-events:auto;white-space:nowrap}
+.brand b{color:var(--lamp)}
+.title{font:600 16px/1.2 Archivo,sans-serif;margin-left:auto;text-align:right;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.title small{display:block;font:500 13px Figtree,sans-serif;color:var(--sand);opacity:.9}
+.strip{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;overflow-x:auto;padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(rgba(22,38,43,0),rgba(22,38,43,.9));scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip button{flex:0 0 auto;width:112px;border:2px solid transparent;border-radius:8px;padding:0;background:var(--basalt);color:var(--white);cursor:pointer;overflow:hidden;text-align:left;font:500 12px Figtree,sans-serif}
+.strip button img{display:block;width:100%;height:64px;object-fit:cover}
+.strip button span{display:block;padding:5px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.strip button[aria-current=true]{border-color:var(--lamp)}
+.credit{position:fixed;right:16px;bottom:calc(112px + env(safe-area-inset-bottom));z-index:5;font:500 11px Figtree,sans-serif;color:var(--sand);background:rgba(22,38,43,.7);padding:5px 9px;border-radius:20px;text-decoration:none}
+.pnlm-hotspot.pnlm-scene{width:46px;height:46px;border-radius:50%;background:rgba(251,248,241,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5l7 8h-4v6H9v-6H5z' fill='%2316262b'/%3E%3C/svg%3E") center/26px no-repeat;box-shadow:0 2px 10px rgba(0,0,0,.4);border:3px solid var(--lamp)}
+.pnlm-tooltip span{font-family:Figtree,sans-serif}
+.pnlm-controls-container{top:64px}
+.pnlm-panorama-info{display:none!important}
+.title{background:rgba(22,38,43,.55);padding:6px 10px;border-radius:8px}
+@media (max-width:520px){.title{font-size:14px}.strip button{width:92px}.strip button img{height:54px}.credit{bottom:calc(100px + env(safe-area-inset-bottom))}}
+</style>
+</head>
+<body>
+<div id="tour" role="application" aria-label="360 degree tour"></div>
+<header class="bar"><a class="brand" href="https://fidramedia.com" target="_blank" rel="noopener">FIDRA <b>MEDIA</b></a>
+<div class="title">Park Hill<small id="room"></small></div></header>
+<nav class="strip" id="strip" aria-label="Rooms"></nav>
+<a class="credit" href="https://fidramedia.com" target="_blank" rel="noopener">360° tour by Fidra Media</a>
+<script>
+const TOUR = {"title": "Park Hill", "client": "Demo", "first_scene": "air", "auto_rotate": true, "scenes": [{"id": "air", "file": "air-2024.jpg", "name": "Aerial view", "start_yaw": 0, "links": [{"to": "lounge", "yaw": 0, "pitch": -35}, {"to": "pool", "yaw": 120, "pitch": -35}], "haov": 360, "vaov": 180.0, "files": {"6k": "panos/air-6k.jpg", "4k": "panos/air-4k.jpg"}, "thumb": "panos/air-thumb.jpg"}, {"id": "lounge", "file": "lounge-2024.jpg", "name": "Lounge", "start_yaw": 0, "links": [{"to": "dining", "yaw": 90, "pitch": -10}, {"to": "air", "yaw": 180, "pitch": -10}], "haov": 360, "vaov": 150.0, "files": {"6k": "panos/lounge-6k.jpg", "4k": "panos/lounge-4k.jpg"}, "thumb": "panos/lounge-thumb.jpg"}, {"id": "dining", "file": "dining-2024.jpg", "name": "Dining room", "start_yaw": 0, "links": [{"to": "lounge", "yaw": -90, "pitch": -10}], "haov": 360, "vaov": 150.0, "files": {"6k": "panos/dining-6k.jpg", "4k": "panos/dining-4k.jpg"}, "thumb": "panos/dining-thumb.jpg"}, {"id": "pool", "file": "pool-2025.jpg", "name": "Pool", "start_yaw": 0, "links": [{"to": "air", "yaw": 180, "pitch": -10}], "haov": 360, "vaov": 150.0, "files": {"6k": "panos/pool-6k.jpg", "4k": "panos/pool-4k.jpg"}, "thumb": "panos/pool-thumb.jpg"}]};
+const big = (() => { try { const c=document.createElement('canvas').getContext('webgl'); return c && c.getParameter(c.MAX_TEXTURE_SIZE) >= 8192 && innerWidth > 900; } catch(e){ return false; } })();
+const scenes = {};
+for (const s of TOUR.scenes) {
+  scenes[s.id] = {
+    title: s.name, type: 'equirectangular', panorama: s.files[big ? '6k' : '4k'],
+    haov: s.haov, vaov: s.vaov, yaw: s.start_yaw || 0, hfov: 100,
+    hotSpots: (s.links || []).map(l => ({ type:'scene', sceneId:l.to, yaw:l.yaw, pitch:l.pitch ?? -10,
+      text: (TOUR.scenes.find(x => x.id === l.to) || {}).name || '' }))
+  };
+  if (s.vaov < 180) { scenes[s.id].minPitch = -s.vaov/2; scenes[s.id].maxPitch = s.vaov/2; }
+}
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const viewer = pannellum.viewer('tour', { default: { firstScene: TOUR.first_scene, autoLoad: true, compass: false,
+  sceneFadeDuration: 600, autoRotate: (TOUR.auto_rotate && !reduce) ? -1.5 : 0, autoRotateInactivityDelay: 8000,
+  showZoomCtrl: !matchMedia('(pointer: coarse)').matches }, scenes });
+const strip = document.getElementById('strip'), room = document.getElementById('room');
+for (const s of TOUR.scenes) {
+  const b = document.createElement('button');
+  b.innerHTML = `<img src="${s.thumb}" alt="" loading="lazy"><span></span>`;
+  b.querySelector('span').textContent = s.name;
+  b.onclick = () => viewer.loadScene(s.id);
+  b.dataset.id = s.id; strip.appendChild(b);
+}
+function mark(id){ for (const b of strip.children) b.setAttribute('aria-current', b.dataset.id === id);
+  room.textContent = (TOUR.scenes.find(x => x.id === id) || {}).name || ''; }
+viewer.on('scenechange', mark); mark(TOUR.first_scene);
+</script>
+</body>
+</html>
